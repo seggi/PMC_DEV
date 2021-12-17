@@ -38,7 +38,6 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       color: Colors.black,
       child: Container(
-          // padding: EdgeInsets.all(8),
           height: height / 2.2,
           decoration: BoxDecoration(
             color: Colors.white24,
@@ -50,20 +49,20 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Container(
                   alignment: Alignment.center,
+                  padding: EdgeInsets.only(top: 10),
                   child: Container(
-                    width: width,
-                    height: 300,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(110),
-                        topRight: Radius.circular(120),
-                        topLeft: Radius.circular(120),
-                        bottomLeft: Radius.circular(120),
+                      width: width,
+                      height: 300,
+                      decoration: BoxDecoration(
+                        // color: Colors.white12,
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(110),
+                          topRight: Radius.circular(120),
+                          topLeft: Radius.circular(120),
+                          bottomLeft: Radius.circular(120),
+                        ),
                       ),
-                    ),
-                    //
-                  )),
+                      child: circleWiget())),
             ],
           )),
     );
@@ -149,6 +148,59 @@ class _LoginPageState extends State<LoginPage> {
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget circleWiget() {
+    return Center(
+      child: Stack(
+        children: [
+          Positioned(
+              child: Container(
+            width: 270,
+            height: 270,
+            decoration: BoxDecoration(
+              color: Colors.white10,
+              shape: BoxShape.circle,
+              // border: Border.all(color: Colors.black)
+            ),
+            child: Center(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "P",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 24),
+                ),
+                Text(
+                  ")",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 24),
+                ),
+                Text(
+                  ")",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 30),
+                ),
+                Text(
+                  "PayingTone",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 18),
+                ),
+              ],
+            )),
+          ))
+        ],
       ),
     );
   }
