@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/auth/signinpage_form.dart';
 
-Widget customBtn(btnIcon, btnText, btnColor, btnTextColor) {
+Widget customBtn(context, btnIcon, btnText, btnColor, btnTextColor) {
   return Container(
     width: 120,
     height: 110,
@@ -10,7 +11,10 @@ Widget customBtn(btnIcon, btnText, btnColor, btnTextColor) {
         borderRadius: BorderRadius.circular(10.0),
         border: Border.all(color: Colors.white30)),
     child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => SignInPageForm()));
+        },
         child: Column(
           children: [
             Icon(

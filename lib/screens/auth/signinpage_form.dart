@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:pmc_dev/widgets/custom_btn.dart';
+import 'package:pmc_dev/widgets/pwd_input.dart';
+import 'package:pmc_dev/widgets/signin_btn.dart';
 import 'package:pmc_dev/widgets/title.dart';
+import 'package:pmc_dev/widgets/username_input.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+class SignInPageForm extends StatefulWidget {
+  SignInPageForm({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignInPageFormState createState() => _SignInPageFormState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignInPageFormState extends State<SignInPageForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       color: Colors.teal,
       child: Container(
-        height: height / 1.5,
+        height: height / 1.2,
         decoration: BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.only(
@@ -107,23 +108,26 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(height: 20),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Text("What Best Describes You?",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      color: Colors.white)),
-            ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                customBtn(
-                    context, btnIcon, "Individual", btnColor, btnTextColor),
-                SizedBox(width: 20),
-                customBtn1(btnIcon1, "Company", btnColor1, btnTextColor),
-              ],
+            Container(
+              padding: EdgeInsets.only(left: 40, right: 40),
+              child: Column(
+                children: [
+                  usernameFormField(),
+                  SizedBox(height: 20),
+                  PwdInputField(),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Forget password?",
+                          style: TextStyle(color: Colors.white54),
+                        )),
+                  ),
+                  SizedBox(height: 30),
+                  signinBtn(context, "Sign In", btnColor, Colors.white),
+                ],
+              ),
             ),
             SizedBox(
               height: 20,
