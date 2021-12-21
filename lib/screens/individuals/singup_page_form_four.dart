@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+class SignUpFormFour extends StatefulWidget {
+  SignUpFormFour({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignUpFormFourState createState() => _SignUpFormFourState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpFormFourState extends State<SignUpFormFour> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -24,8 +24,8 @@ class _LoginPageState extends State<LoginPage> {
             child: Container(
               child: Stack(
                 children: [
-                  authBottomContents(
-                      context, "Sign In", mainButtonContent(context)),
+                  authBottomContents(context, "Sign Up",
+                      mainSignUpInputFormContentOne(context)),
                   Positioned(
                     child: ClipPath(
                       clipper: WaveClipperBox(),

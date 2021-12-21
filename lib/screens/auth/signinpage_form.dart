@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pmc_dev/widgets/pwd_input.dart';
 import 'package:pmc_dev/widgets/signin_btn.dart';
 import 'package:pmc_dev/widgets/title.dart';
-import 'package:pmc_dev/widgets/username_input.dart';
+import 'package:pmc_dev/widgets/custom_input.dart';
 
 class SignInPageForm extends StatefulWidget {
   SignInPageForm({Key? key}) : super(key: key);
@@ -112,7 +112,7 @@ class _SignInPageFormState extends State<SignInPageForm> {
               padding: EdgeInsets.only(left: 40, right: 40),
               child: Column(
                 children: [
-                  usernameFormField(),
+                  // usernameFormField(),
                   SizedBox(height: 20),
                   PwdInputField(),
                   Align(
