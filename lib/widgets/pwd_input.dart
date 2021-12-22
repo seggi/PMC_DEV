@@ -11,6 +11,8 @@ class PwdInputField extends StatefulWidget {
 class _PwdInputFieldState extends State<PwdInputField> {
   bool _passwordVisibility = false;
 
+  get sufixIcon => null;
+
   @override
   void initState() {
     setState(() {
@@ -23,30 +25,40 @@ class _PwdInputFieldState extends State<PwdInputField> {
     return Container(
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(18),
           color: Colors.white24,
         ),
-        child: TextFormField(
-          keyboardType: TextInputType.text,
-          obscureText: _passwordVisibility,
-          decoration: InputDecoration(
-            hintText: 'Password',
-            prefixIcon: IconButton(
-                onPressed: () {
-                  // Get password visibility bool var
-                  setState(() {
-                    _passwordVisibility = !_passwordVisibility;
-                  });
-                },
-                icon: Icon(
-                    !_passwordVisibility
-                        ? Icons.visibility
-                        : Icons.visibility_off,
-                    color: Colors.white)),
-            border: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(10)),
-          ),
+        child: Column(
+          children: [
+            TextFormField(
+              keyboardType: TextInputType.text,
+              obscureText: _passwordVisibility,
+              decoration: InputDecoration(
+                hintText: 'Password',
+                prefixIcon: Container(
+                  child: Icon(
+                    Icons.vpn_key,
+                    color: Colors.white,
+                  ),
+                ),
+                suffixIcon: IconButton(
+                    onPressed: () {
+                      // Get password visibility bool var
+                      setState(() {
+                        _passwordVisibility = !_passwordVisibility;
+                      });
+                    },
+                    icon: Icon(
+                        !_passwordVisibility
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.white)),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(10)),
+              ),
+            ),
+          ],
         ),
       ),
     );

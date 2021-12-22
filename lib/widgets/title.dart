@@ -52,3 +52,24 @@ Widget circleWiget() {
     ),
   );
 }
+
+Widget firstCircle() {
+  return Center(
+    child: Stack(
+      children: [
+        Positioned(
+            // bottom: 0,
+            child: Container(
+          width: 800,
+          height: 500,
+          decoration: BoxDecoration(
+            // color: Colors.red,
+            shape: BoxShape.rectangle,
+
+            // border: Border.all(color: Colors.black)
+          ),
+        ))
+      ],
+    ),
+  );
+}
