@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/auth/loginpage_form.dart';
+import 'package:pmc_dev/screens/individuals/dashboard/home_page.dart';
 
 Widget customBtn(context, btnIcon, btnText, btnColor, btnTextColor) {
   return Container(
@@ -68,7 +69,7 @@ Widget customBtn1(btnIcon, btnText, btnColor, btnTextColor) {
   );
 }
 
-Widget signInBtn(btnText, btnColor, btnTextColor) {
+Widget signInBtn(context, btnText, btnColor, btnTextColor) {
   return Container(
     width: 400,
     padding: EdgeInsets.all(2),
@@ -77,7 +78,10 @@ Widget signInBtn(btnText, btnColor, btnTextColor) {
         borderRadius: BorderRadius.circular(20.0),
         border: Border.all(color: Colors.white12)),
     child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
+        },
         child: Column(
           children: [
             SizedBox(
