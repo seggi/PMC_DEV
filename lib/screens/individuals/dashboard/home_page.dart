@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/dashboard/product_details.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -228,17 +229,17 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            productImageButton(
+            productImageButton(context,
                 'https://m.media-amazon.com/images/I/61KMsxswCRL._UX569_.jpg'),
             SizedBox(
               width: 10,
             ),
-            productImageButton(
+            productImageButton(context,
                 'https://i.pinimg.com/736x/00/fe/e7/00fee757785ee5df41d889588d903e58.jpg'),
             SizedBox(
               width: 10,
             ),
-            productImageButton(
+            productImageButton(context,
                 'https://m.media-amazon.com/images/I/71vmyxuI92L._AC_UL1500_.jpg'),
           ],
         ),
@@ -304,9 +305,16 @@ Widget rotateBox(boxColor, boxIcon) {
   );
 }
 
-Widget productImageButton(imageUrls) {
+Widget productImageButton(context, imageUrls) {
   return TextButton(
-    onPressed: () {},
+    onPressed: () {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ProductDetails(
+                    imageBox: imageUrls,
+                  )));
+    },
     child: Container(
       width: 180,
       height: 250,
