@@ -13,16 +13,79 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     return Scaffold(
-        body: SafeArea(
-      child: Container(
-        height: height,
-        color: Colors.black,
-        child: SingleChildScrollView(
-            child: Stack(
-          children: [mainWidget(), Positioned(child: customBottomBar())],
-        )),
+      backgroundColor: Colors.white54,
+      body: SafeArea(
+        child: Container(
+          height: height,
+          color: Colors.black,
+          child: SingleChildScrollView(
+              child: Stack(
+            children: [
+              mainWidget(),
+            ],
+          )),
+        ),
       ),
-    ));
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.black54,
+        backgroundColor: Colors.black,
+        child: const Icon(
+          Icons.shopping_cart_outlined,
+          color: Colors.white,
+        ),
+        onPressed: () {},
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.black54,
+        shape: CircularNotchedRectangle(),
+        notchMargin: 10,
+        child: Row(
+          children: <Widget>[
+            SizedBox(
+              width: 30,
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.notifications,
+                color: Colors.white54,
+              ),
+              onPressed: () {},
+            ),
+            SizedBox(
+              width: 30,
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.window,
+                color: Colors.white54,
+              ),
+              onPressed: () {},
+            ),
+            SizedBox(
+              width: 80,
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.messenger_outline,
+                color: Colors.white54,
+              ),
+              onPressed: () {},
+            ),
+            SizedBox(
+              width: 30,
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.account_circle,
+                color: Colors.white54,
+              ),
+              onPressed: () {},
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Widget mainWidget() {
@@ -190,7 +253,20 @@ class _HomePageState extends State<HomePage> {
                   "Bread",
                   "Bread is a staple food prepared from a dough of flour and water, usually by baking. Throughout recorded history and around the world, it has been an important part of many cultures' diet")
             ],
-          )
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              "All item Categories.",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20),
+            ),
+          ),
         ],
       ),
     );
@@ -270,12 +346,6 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-    );
-  }
-
-  Widget customBottomBar() {
-    return Container(
-      child: Text("FFFF"),
     );
   }
 }
@@ -378,7 +448,7 @@ Widget articleDetails(imageUrls, titleDesc, tedtDetails) {
         ),
         Text("40.00",
             style: TextStyle(
-                color: Colors.teal, fontSize: 18, fontWeight: FontWeight.w600))
+                color: Colors.teal, fontSize: 18, fontWeight: FontWeight.w600)),
       ],
     ),
   );

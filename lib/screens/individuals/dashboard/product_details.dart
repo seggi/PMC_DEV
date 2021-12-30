@@ -16,7 +16,15 @@ class _ProductDetailsState extends State<ProductDetails> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        actions: [Icon(Icons.library_add_check_sharp)],
+        actions: [
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Icon(
+              Icons.library_add_check_sharp,
+              color: Colors.teal,
+            ),
+          )
+        ],
       ),
       body: Container(
         child: SingleChildScrollView(
@@ -25,7 +33,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               productImageButton(imageBox),
               Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 2,
+                  // height: MediaQuery.of(context).size.height / 2,
                   decoration: BoxDecoration(
                     color: Colors.white24,
                     shape: BoxShape.rectangle,
@@ -56,7 +64,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width,
-                          // height: MediaQuery.of(context).size.height / 2,
+                          // height: MediaQuery.of(context).size.height,
                           padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
                             color: Colors.black54,
@@ -123,26 +131,107 @@ class _ProductDetailsState extends State<ProductDetails> {
                                   top: 20,
                                 ),
                                 child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    rectagleBox(Colors.white24, "1"),
-                                    SizedBox(
-                                      width: 30,
+                                    Row(
+                                      children: [
+                                        rectagleBox(
+                                          Colors.white24,
+                                          "1",
+                                        ),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        rectagleBox(Colors.white24, "2"),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        rectagleBox(Colors.white24, "3"),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        rotateBox(Colors.white24, "...")
+                                      ],
                                     ),
-                                    rectagleBox(Colors.white24, "2"),
-                                    SizedBox(
-                                      width: 30,
-                                    ),
-                                    rectagleBox(Colors.white24, "3"),
-                                    SizedBox(
-                                      width: 30,
-                                    ),
-                                    rotateBox(Colors.white24, "...")
+                                    Text("Rwf 300,000",
+                                        style: TextStyle(
+                                            color: Colors.teal,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w800))
                                   ],
                                 ),
+                              ),
+                              SizedBox(height: 30),
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(4),
+                                    decoration: BoxDecoration(
+                                        color: Colors.black54,
+                                        shape: BoxShape.rectangle,
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(color: Colors.teal)),
+                                    child: TextButton(
+                                      onPressed: () {},
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.storage_outlined,
+                                            color: Colors.teal,
+                                            size: 20,
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Text("Pay Now",
+                                              style: TextStyle(
+                                                  color: Colors.teal,
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w800))
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    width: 230,
+                                    padding: EdgeInsets.all(4),
+                                    decoration: BoxDecoration(
+                                        color: Colors.teal,
+                                        shape: BoxShape.rectangle,
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(color: Colors.teal)),
+                                    child: TextButton(
+                                      onPressed: () {},
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text("Pay later",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w800)),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Icon(
+                                            Icons.arrow_forward_ios_outlined,
+                                            color: Colors.white,
+                                            size: 20,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               )
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ))
@@ -200,7 +289,8 @@ Widget rotateBox(boxColor, boxText) {
           bottomLeft: Radius.circular(12),
         ),
       ),
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.only(top: 8, bottom: 8),
+      alignment: Alignment.center,
       child: Transform.rotate(
           angle: 2.3,
           child: Text(
@@ -218,27 +308,23 @@ Widget rectagleBox(boxColor, boxText) {
   return Transform.rotate(
     angle: 0,
     child: Container(
-      width: 40,
-      height: 40,
-      decoration: BoxDecoration(
-        color: boxColor,
-        borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(12),
-          topRight: Radius.circular(12),
-          topLeft: Radius.circular(12),
-          bottomLeft: Radius.circular(12),
+        width: 40,
+        height: 40,
+        decoration: BoxDecoration(
+          color: boxColor,
+          borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(12),
+            topRight: Radius.circular(12),
+            topLeft: Radius.circular(12),
+            bottomLeft: Radius.circular(12),
+          ),
         ),
-      ),
-      padding: EdgeInsets.all(20),
-      child: Transform.rotate(
-          angle: 2.3,
-          child: Text(
-            boxText,
-            style: TextStyle(
-                color: Colors.white54,
-                fontSize: 24,
-                fontWeight: FontWeight.w600),
-          )),
-    ),
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.center,
+        child: Text(
+          boxText,
+          style: TextStyle(
+              color: Colors.white54, fontSize: 18, fontWeight: FontWeight.w600),
+        )),
   );
 }
