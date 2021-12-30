@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/singup_page_form_two.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
+import 'package:pmc_dev/widgets/custom_btn.dart';
+import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
 class SignUpFormOne extends StatefulWidget {
@@ -25,7 +28,38 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
               child: Stack(
                 children: [
                   authBottomContents(
-                      context, "Sign Up", mainSignUpInputFormContent(context)),
+                      context,
+                      "Sign Up",
+                      Container(
+                        padding: EdgeInsets.all(25),
+                        child: Column(
+                          children: [
+                            formFieldLeft("Enter full name", Icons.person),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldRight("Phone number", Icons.phone_android),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldRight("Your email", Icons.email),
+                            SizedBox(
+                              height: 40,
+                            ),
+                            continueBtn(
+                              context,
+                              () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SignUpFormTwo()));
+                              },
+                            )
+                          ],
+                        ),
+                      ),
+                      "",
+                      "Sign In"),
                   Positioned(
                     child: ClipPath(
                       clipper: WaveClipperBox(),

@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/auth/loginpage.dart';
 import 'package:pmc_dev/screens/individuals/singup_page_form_five.dart';
 import 'package:pmc_dev/screens/individuals/singup_page_form_four.dart';
 import 'package:pmc_dev/screens/individuals/singup_page_form_one.dart';
@@ -8,7 +11,8 @@ import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/pwd_input.dart';
 
-Widget authBottomContents(context, scrTitleText, mainContent) {
+Widget authBottomContents(
+    context, scrTitleText, mainContent, otherText, btnTxt) {
   final double height = MediaQuery.of(context).size.height;
   final double width = MediaQuery.of(context).size.width;
   return Container(
@@ -36,14 +40,14 @@ Widget authBottomContents(context, scrTitleText, mainContent) {
                         ? SizedBox(
                             width: 1,
                           )
-                        : topBottomText("Personal information"),
+                        : topBottomText(otherText),
                     SizedBox(
                       height: 5,
                     ),
                   ],
                 )),
           ),
-          buttonContent(context, width, height, mainContent)
+          buttonContent(context, width, height, mainContent, btnTxt),
         ],
       ));
 }
@@ -92,7 +96,7 @@ Widget samllCircle() {
   );
 }
 
-Widget buttonContent(context, width, height, mainContent) {
+Widget buttonContent(context, width, height, mainContent, btnTxt) {
   return Container(
     color: Colors.teal,
     width: width,
@@ -126,14 +130,21 @@ Widget buttonContent(context, width, height, mainContent) {
                           color: Colors.white70, fontWeight: FontWeight.w600),
                     ),
                     TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SignUpFormOne()));
-                        },
+                        onPressed: btnTxt == "Sign Up"
+                            ? () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SignUpFormOne()));
+                              }
+                            : () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LoginPage()));
+                              },
                         child: Text(
-                          "sign up",
+                          btnTxt,
                           style: TextStyle(
                               color: Colors.teal, fontWeight: FontWeight.w600),
                         ))
@@ -197,180 +208,6 @@ Widget mainInputFormContent(context) {
               height: 40,
             ),
             signInBtn(context, "Sign In", Colors.teal, Colors.white)
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
-// All Sign up Form screens comes
-
-Widget mainSignUpInputFormContent(context) {
-  return Padding(
-    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-    child: Form(
-      child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            formFieldLeft("Enter full name", Icons.person),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Phone number", Icons.phone_android),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Your email", Icons.email),
-            SizedBox(
-              height: 40,
-            ),
-            continueBtn("Continue", Colors.teal, Colors.white, () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignUpFormTwo()));
-            })
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
-Widget mainSignUpInputFormContentOne(context) {
-  return Padding(
-    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-    child: Form(
-      child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            formFieldLeft("Upload profile image", Icons.image),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Enter full address", Icons.location_on),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Select your gender", Icons.female),
-            SizedBox(
-              height: 40,
-            ),
-            continueBtn("Continue", Colors.teal, Colors.white, () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignUpFormThree()));
-            })
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
-Widget mainSignUpInputFormContentTwo(context) {
-  return Padding(
-    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-    child: Form(
-      child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            formFieldRight("Set password", Icons.vpn_key_sharp),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Confirm password", Icons.vpn_key_sharp),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldLeft("Enter OTP code", Icons.fingerprint),
-            SizedBox(
-              height: 40,
-            ),
-            continueBtn("Continue", Colors.teal, Colors.white, () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignUpFormFour()));
-            })
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
-Widget mainSignUpInputFormContentThree(context) {
-  return Padding(
-    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-    child: Form(
-      child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            formFieldRight("Place of employment", Icons.account_balance),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Job title", Icons.work_rounded),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldLeft("Monthly income", Icons.attach_money_rounded),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldLeft("Contract end date(dd/mm/yy)", Icons.calendar_today),
-            SizedBox(
-              height: 40,
-            ),
-            continueBtn("Continue", Colors.teal, Colors.white, () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignUpFormFive()));
-            })
-          ],
-        ),
-      ),
-    ),
-  );
-}
-
-Widget mainSignUpInputFormContentFour(context) {
-  return Padding(
-    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-    child: Form(
-      child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            formFieldRight("Place of employment", Icons.person),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Employee address", Icons.location_on),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldLeft("Employer tin number", Icons.menu_open_rounded),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldLeft(
-                "Employee point of contact", Icons.control_point_duplicate),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("length of contract", Icons.file_copy),
-            SizedBox(
-              height: 20,
-            ),
-            formFieldRight("Years of service", Icons.calendar_today),
-            SizedBox(
-              height: 40,
-            ),
-            continueBtn("Continue", Colors.teal, Colors.white, () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignUpFormFive()));
-            })
           ],
         ),
       ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/singup_page_form_four.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
+import 'package:pmc_dev/widgets/custom_btn.dart';
+import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
 class SignUpFormThree extends StatefulWidget {
@@ -24,8 +27,41 @@ class _SignUpFormThreeState extends State<SignUpFormThree> {
             child: Container(
               child: Stack(
                 children: [
-                  authBottomContents(context, "Sign Up",
-                      mainSignUpInputFormContentOne(context)),
+                  authBottomContents(
+                      context,
+                      "Sign Up",
+                      Container(
+                        padding: EdgeInsets.all(25),
+                        child: Column(
+                          children: [
+                            formFieldRight("Set password", Icons.vpn_key_sharp),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldRight(
+                                "Confirm password", Icons.vpn_key_sharp),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldLeft("Enter OTP code", Icons.fingerprint),
+                            SizedBox(
+                              height: 40,
+                            ),
+                            continueBtn(
+                              context,
+                              () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            SignUpFormFour()));
+                              },
+                            )
+                          ],
+                        ),
+                      ),
+                      "Account security details",
+                      "Sign In"),
                   Positioned(
                     child: ClipPath(
                       clipper: WaveClipperBox(),

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_six.dart';
+import 'package:pmc_dev/screens/auth/loginpage.dart';
+import 'package:pmc_dev/screens/individuals/singup_page_form_five.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
-class SignUpFormFive extends StatefulWidget {
-  SignUpFormFive({Key? key}) : super(key: key);
+class SignUpFormSix extends StatefulWidget {
+  SignUpFormSix({Key? key}) : super(key: key);
 
   @override
-  _SignUpFormFiveState createState() => _SignUpFormFiveState();
+  _SignUpFormSixState createState() => _SignUpFormSixState();
 }
 
-class _SignUpFormFiveState extends State<SignUpFormFive> {
+class _SignUpFormSixState extends State<SignUpFormSix> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -34,32 +35,21 @@ class _SignUpFormFiveState extends State<SignUpFormFive> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldRight("Place of employment", Icons.person),
+                            formFieldRight("Bank Name", Icons.account_balance),
                             SizedBox(
                               height: 20,
                             ),
                             formFieldRight(
-                                "Employee address", Icons.location_on),
+                                "Account Type", Icons.shopping_bag_outlined),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldLeft("Account Number", Icons.bar_chart),
                             SizedBox(
                               height: 20,
                             ),
                             formFieldLeft(
-                                "Employer tin number", Icons.menu_open_rounded),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft("Employee point of contact",
-                                Icons.control_point_duplicate),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight(
-                                "length of contract", Icons.file_copy),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight(
-                                "Years of service", Icons.calendar_today),
+                                "Currency", Icons.attach_money_rounded),
                             SizedBox(
                               height: 40,
                             ),
@@ -69,13 +59,13 @@ class _SignUpFormFiveState extends State<SignUpFormFive> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => SignUpFormSix()));
+                                        builder: (context) => LoginPage()));
                               },
                             )
                           ],
                         ),
                       ),
-                      "Employer details",
+                      "Bank details",
                       "Sign In"),
                   Positioned(
                     child: ClipPath(
