@@ -150,8 +150,8 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
                           width: 5,
@@ -258,14 +258,73 @@ class _HomePageState extends State<HomePage> {
             height: 30,
           ),
           Container(
-            alignment: Alignment.bottomLeft,
-            child: Text(
-              "All item Categories.",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20),
-            ),
+              alignment: Alignment.bottomLeft,
+              child: Column(
+                children: [
+                  Container(
+                    alignment: Alignment.bottomLeft,
+                    padding: EdgeInsets.only(top: 10, bottom: 20),
+                    child: Text(
+                      "All item Categories.",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: 180,
+                        height: 180,
+                        child: productImageButton(context,
+                            'https://cdn.anscommerce.com/catalog/brandstore/johnson/17_7_20/Sale.jpg'),
+                      ),
+                      Container(
+                        width: 180,
+                        child: productImageButton(context,
+                            'https://www.thespruceeats.com/thmb/abx-C65PX-C9s04dCqzzV_QIr9o=/3931x2948/smart/filters:no_upscale()/super-easy-bread-for-beginners-428108-hero-01-a3c09d713f9e4055977a72c391d353c9.jpg'),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: 180,
+                        child: productImageButton(context,
+                            'https://image.made-in-china.com/202f0j00EMGRPDpgsbqJ/Wholesale-Used-Mobile-Phone-Cellphone-for-iPhone-11-11PRO-Max-64GB-32GB-128GB-256GB-New-Unlocked-Original.jpg'),
+                      ),
+                      Container(
+                        width: 180,
+                        height: 200,
+                        child: productImageButton(context,
+                            'https://kphv.cz/wp-content/uploads/1246280_16061017110043391702.jpg'),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: 180,
+                        height: 200,
+                        child: productImageButton(context,
+                            'https://www.afrikmag.com/wp-content/uploads/2020/05/canalplus.jpg'),
+                      ),
+                      Container(
+                        width: 180,
+                        height: 150,
+                        child: productImageButton(context,
+                            'https://i.dawn.com/primary/2018/10/5bcbe259cef7c.jpg'),
+                      ),
+                    ],
+                  )
+                ],
+              )),
+          SizedBox(
+            height: 20,
           ),
         ],
       ),
@@ -409,36 +468,41 @@ Widget articleDetails(imageUrls, titleDesc, tedtDetails) {
     decoration: BoxDecoration(
         color: Colors.white24, borderRadius: BorderRadius.circular(10)),
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         singleImage(imageUrls),
         SizedBox(
           width: 20,
         ),
         Container(
-          width: 150,
-          height: 80,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(
-                titleDesc,
-                style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600),
+              Container(
+                width: 120,
+                child: Text(
+                  titleDesc,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
               FittedBox(
+                alignment: Alignment.center,
                 fit: BoxFit.contain,
-                child: Text(tedtDetails,
-                    maxLines: 2,
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600)),
+                child: Container(
+                  width: 120,
+                  child: Text(tedtDetails,
+                      maxLines: 2,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w600)),
+                ),
               ),
             ],
           ),
@@ -446,9 +510,15 @@ Widget articleDetails(imageUrls, titleDesc, tedtDetails) {
         SizedBox(
           width: 20,
         ),
-        Text("40.00",
-            style: TextStyle(
-                color: Colors.teal, fontSize: 18, fontWeight: FontWeight.w600)),
+        Container(
+          width: 80,
+          padding: EdgeInsets.all(2),
+          child: Text("40,000",
+              style: TextStyle(
+                  color: Colors.teal,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600)),
+        ),
       ],
     ),
   );
