@@ -24,8 +24,8 @@ class _LoginPageState extends State<LoginPage> {
             child: Container(
               child: Stack(
                 children: [
-                  authBottomContents(
-                      context, "Sign In", mainButtonContent(context)),
+                  authBottomContents(context, "Sign In",
+                      mainButtonContent(context), "", "Sign Up"),
                   Positioned(
                     child: ClipPath(
                       clipper: WaveClipperBox(),

@@ -98,28 +98,28 @@ Widget signInBtn(context, btnText, btnColor, btnTextColor) {
   );
 }
 
-Widget continueBtn(btnText, btnColor, btnTextColor, goTo) {
-  return Container(
-    width: 400,
-    padding: EdgeInsets.all(2),
-    decoration: BoxDecoration(
-        color: btnColor,
-        borderRadius: BorderRadius.circular(20.0),
-        border: Border.all(color: Colors.white12)),
-    child: TextButton(
-        onPressed: goTo,
+Widget continueBtn(context, fn) {
+  return TextButton(
+      onPressed: fn,
+      child: Container(
+        width: 400,
+        padding: EdgeInsets.only(top: 16, bottom: 16),
+        decoration: BoxDecoration(
+            color: Colors.teal,
+            borderRadius: BorderRadius.circular(20.0),
+            border: Border.all(color: Colors.white12)),
         child: Column(
           children: [
             SizedBox(
               height: 5,
             ),
-            Text(btnText,
+            Text("Continue",
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 15,
-                  color: btnTextColor,
+                  color: Colors.white,
                 ))
           ],
-        )),
-  );
+        ),
+      ));
 }

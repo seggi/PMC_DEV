@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/singup_page_form_five.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
+import 'package:pmc_dev/widgets/custom_btn.dart';
+import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
 class SignUpFormFour extends StatefulWidget {
@@ -24,8 +27,47 @@ class _SignUpFormFourState extends State<SignUpFormFour> {
             child: Container(
               child: Stack(
                 children: [
-                  authBottomContents(context, "Sign Up",
-                      mainSignUpInputFormContentOne(context)),
+                  authBottomContents(
+                      context,
+                      "Sign Up",
+                      Container(
+                        padding: EdgeInsets.all(25),
+                        child: Column(
+                          children: [
+                            formFieldRight(
+                                "Place of employment", Icons.account_balance),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldRight("Job title", Icons.work_rounded),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldLeft(
+                                "Monthly income", Icons.attach_money_rounded),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldLeft("Contract end date(dd/mm/yy)",
+                                Icons.calendar_today),
+                            SizedBox(
+                              height: 40,
+                            ),
+                            continueBtn(
+                              context,
+                              () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            SignUpFormFive()));
+                              },
+                            )
+                          ],
+                        ),
+                      ),
+                      "Employment details",
+                      "Sign In"),
                   Positioned(
                     child: ClipPath(
                       clipper: WaveClipperBox(),

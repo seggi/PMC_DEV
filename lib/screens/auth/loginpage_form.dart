@@ -24,8 +24,8 @@ class _LoginPageFormState extends State<LoginPageForm> {
             child: Container(
               child: Stack(
                 children: [
-                  authBottomContents(
-                      context, "Sign In", mainInputFormContent(context)),
+                  authBottomContents(context, "Sign In",
+                      mainInputFormContent(context), "", "Sign up"),
                   Positioned(
                     child: ClipPath(
                       clipper: WaveClipperBox(),
