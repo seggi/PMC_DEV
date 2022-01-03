@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/dashboard/dashboard.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/product_details.dart';
 
 class HomePage extends StatefulWidget {
@@ -60,7 +61,10 @@ class _HomePageState extends State<HomePage> {
                 Icons.window,
                 color: Colors.white54,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DashBoardScreen()));
+              },
             ),
             SizedBox(
               width: 80,
