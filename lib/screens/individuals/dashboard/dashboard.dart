@@ -170,161 +170,164 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
               topLeft: Radius.circular(24),
             )),
         child: Container(
+          height: MediaQuery.of(context).size.height,
           margin: EdgeInsets.only(top: 120),
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                        padding: EdgeInsets.only(
-                            left: 8, right: 8, top: 4, bottom: 4),
-                        // margin: EdgeInsets.only(left: 40, right: 40),
-                        decoration: BoxDecoration(
-                            color: Colors.cyan,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(24),
-                              bottomRight: Radius.circular(24),
-                              topRight: Radius.circular(24),
-                              topLeft: Radius.circular(24),
-                            )),
-                        child: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              "All",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600),
-                            ))),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                        padding: EdgeInsets.only(
-                            left: 8, right: 8, top: 4, bottom: 4),
-                        // margin: EdgeInsets.only(left: 40, right: 40),
-                        decoration: BoxDecoration(
-                            // color: Colors.teal,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(24),
-                              bottomRight: Radius.circular(24),
-                              topRight: Radius.circular(24),
-                              topLeft: Radius.circular(24),
-                            ),
-                            border: Border.all(color: Colors.cyan)),
-                        child: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              "My Profile",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600),
-                            ))),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                        padding: EdgeInsets.only(
-                            left: 8, right: 8, top: 4, bottom: 4),
-                        // margin: EdgeInsets.only(left: 40, right: 40),
-                        decoration: BoxDecoration(
-                            // color: Colors.cyan,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(24),
-                              bottomRight: Radius.circular(24),
-                              topRight: Radius.circular(24),
-                              topLeft: Radius.circular(24),
-                            ),
-                            border: Border.all(color: Colors.cyan)),
-                        child: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              "Reports",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600),
-                            ))),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                        padding: EdgeInsets.only(
-                            left: 8, right: 8, top: 4, bottom: 4),
-                        // margin: EdgeInsets.only(left: 40, right: 40),
-                        decoration: BoxDecoration(
-                            // color: Colors.cyan,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(24),
-                              bottomRight: Radius.circular(24),
-                              topRight: Radius.circular(24),
-                              topLeft: Radius.circular(24),
-                            ),
-                            border: Border.all(color: Colors.cyan)),
-                        child: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              "Claim",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600),
-                            )))
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              chartBox(),
-              SizedBox(
-                height: 5,
-              ),
-              Container(
-                padding: EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "My Products",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "View all",
-                          style: TextStyle(
+          child: SingleChildScrollView(
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Container(
+                          padding: EdgeInsets.only(
+                              left: 8, right: 8, top: 4, bottom: 4),
+                          // margin: EdgeInsets.only(left: 40, right: 40),
+                          decoration: BoxDecoration(
                               color: Colors.cyan,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Icon(
-                          Icons.arrow_forward,
-                          color: Colors.cyan,
-                        )
-                      ],
-                    )
-                  ],
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(24),
+                                bottomRight: Radius.circular(24),
+                                topRight: Radius.circular(24),
+                                topLeft: Radius.circular(24),
+                              )),
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "All",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600),
+                              ))),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          padding: EdgeInsets.only(
+                              left: 8, right: 8, top: 4, bottom: 4),
+                          // margin: EdgeInsets.only(left: 40, right: 40),
+                          decoration: BoxDecoration(
+                              // color: Colors.teal,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(24),
+                                bottomRight: Radius.circular(24),
+                                topRight: Radius.circular(24),
+                                topLeft: Radius.circular(24),
+                              ),
+                              border: Border.all(color: Colors.cyan)),
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "My Profile",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600),
+                              ))),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          padding: EdgeInsets.only(
+                              left: 8, right: 8, top: 4, bottom: 4),
+                          // margin: EdgeInsets.only(left: 40, right: 40),
+                          decoration: BoxDecoration(
+                              // color: Colors.cyan,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(24),
+                                bottomRight: Radius.circular(24),
+                                topRight: Radius.circular(24),
+                                topLeft: Radius.circular(24),
+                              ),
+                              border: Border.all(color: Colors.cyan)),
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Reports",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600),
+                              ))),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          padding: EdgeInsets.only(
+                              left: 8, right: 8, top: 4, bottom: 4),
+                          // margin: EdgeInsets.only(left: 40, right: 40),
+                          decoration: BoxDecoration(
+                              // color: Colors.cyan,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(24),
+                                bottomRight: Radius.circular(24),
+                                topRight: Radius.circular(24),
+                                topLeft: Radius.circular(24),
+                              ),
+                              border: Border.all(color: Colors.cyan)),
+                          child: TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Claim",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600),
+                              )))
+                    ],
+                  ),
                 ),
-              ),
-              Container(padding: EdgeInsets.all(20), child: productBox())
-            ],
+                SizedBox(
+                  height: 30,
+                ),
+                chartBox(),
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "My Products",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "View all",
+                            style: TextStyle(
+                                color: Colors.cyan,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.cyan,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                Container(padding: EdgeInsets.all(20), child: productBox())
+              ],
+            ),
           ),
         ));
   }
@@ -439,17 +442,36 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
 
   Widget productBox() {
     return Container(
-      color: Colors.white24,
+      decoration: BoxDecoration(
+        color: Colors.white24,
+        shape: BoxShape.rectangle,
+        borderRadius: BorderRadius.only(
+          bottomRight: Radius.circular(12),
+          topRight: Radius.circular(12),
+          topLeft: Radius.circular(12),
+          bottomLeft: Radius.circular(12),
+        ),
+      ),
       child: Column(
         children: [
-          Row(
-            children: [
-              articleDetails(
-                  "https://ae01.alicdn.com/kf/Ha8163ad4dd124f73b418f390179a1febE/Basketball-Shoes-Men-Sports-Shoes-High-Tops-Mens-Basketball-Sneakers-Athletics-Basket-Shoes-Outdoor-Men-Sneakers.jpg",
-                  "Men basket",
-                  "Check website for latest pricing and availability"),
-            ],
-          )
+          articleDetails(
+              "https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg",
+              "DELL",
+              "Check website for latest pricing and availability"),
+          SizedBox(
+            height: 2,
+          ),
+          articleDetails(
+              "https://assets.swappie.com/iPhone-11-Pro-space-gray-back.png",
+              "Iphone",
+              "Check website for latest pricing and availability"),
+          SizedBox(
+            height: 2,
+          ),
+          articleDetails(
+              "https://www.tradedepot.co.nz/media/catalog/product/3/5/353584_new_lr.jpg",
+              "Iphone",
+              "Check website for latest pricing and availability"),
         ],
       ),
     );
@@ -457,9 +479,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
 
   Widget articleDetails(imageUrls, titleDesc, tedtDetails) {
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: EdgeInsets.only(left: 12, right: 12, top: 5, bottom: 5),
       decoration: BoxDecoration(
-          color: Colors.white24, borderRadius: BorderRadius.circular(10)),
+        color: Colors.white24,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -504,10 +527,18 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             width: 20,
           ),
           Container(
-              width: 80,
-              height: 100,
-              color: Colors.teal,
-              padding: EdgeInsets.all(2),
+              // width: 80,
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.teal,
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(12),
+                  topRight: Radius.circular(12),
+                  topLeft: Radius.circular(12),
+                  bottomLeft: Radius.circular(12),
+                ),
+              ),
               child: TextButton(
                 onPressed: () {},
                 child: Row(
