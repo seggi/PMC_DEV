@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/dashboard_product_box.dart';
-import 'package:pmc_dev/screens/individuals/profile/profile_details.dart';
+import 'package:pmc_dev/screens/individuals/profile/profile_page.dart';
 
-class DashBoardScreen extends StatefulWidget {
-  DashBoardScreen({Key? key}) : super(key: key);
+class DashBoardPage extends StatefulWidget {
+  DashBoardPage({Key? key}) : super(key: key);
 
   @override
-  _DashBoardScreenState createState() => _DashBoardScreenState();
+  _DashBoardPageState createState() => _DashBoardPageState();
 }
 
-class _DashBoardScreenState extends State<DashBoardScreen> {
+class _DashBoardPageState extends State<DashBoardPage> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.white54,
+      backgroundColor: Colors.transparent,
       body: SafeArea(
         child: Container(
           height: height,
@@ -77,65 +77,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
               )
             ],
           )),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      floatingActionButton: FloatingActionButton(
-        foregroundColor: Colors.black,
-        backgroundColor: Colors.black12,
-        child: const Icon(
-          Icons.dashboard_rounded,
-          color: Colors.white,
-        ),
-        onPressed: () {},
-      ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.black54,
-        shape: CircularNotchedRectangle(),
-        notchMargin: 10,
-        child: Row(
-          children: <Widget>[
-            SizedBox(
-              width: 30,
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.notifications,
-                color: Colors.white54,
-              ),
-              onPressed: () {},
-            ),
-            SizedBox(
-              width: 30,
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.dashboard_rounded,
-                color: Colors.white54,
-              ),
-              onPressed: () {},
-            ),
-            SizedBox(
-              width: 80,
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.messenger_outline,
-                color: Colors.white54,
-              ),
-              onPressed: () {},
-            ),
-            SizedBox(
-              width: 30,
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.account_circle,
-                color: Colors.white54,
-              ),
-              onPressed: () {},
-            ),
-          ],
         ),
       ),
     );
@@ -238,8 +179,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              ProfileDetails()));
+                                          builder: (context) => ProfilePage()));
                                 },
                                 child: Text(
                                   "My Profile",

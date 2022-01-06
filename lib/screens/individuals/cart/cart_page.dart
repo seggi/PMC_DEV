@@ -3,20 +3,20 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:pmc_dev/screens/individuals/cart/artical_details.dart';
 import 'package:pmc_dev/screens/individuals/cart/subtotal.dart';
 
-class CartDetails extends StatefulWidget {
-  CartDetails({Key? key}) : super(key: key);
+class CartPage extends StatefulWidget {
+  CartPage({Key? key}) : super(key: key);
 
   @override
-  _CartDetailsState createState() => _CartDetailsState();
+  _CartPageState createState() => _CartPageState();
 }
 
-class _CartDetailsState extends State<CartDetails> {
+class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: Colors.white54,
+        backgroundColor: Colors.transparent,
         body: Container(
             child: SafeArea(
                 child: Stack(children: [
@@ -123,14 +123,6 @@ class _CartDetailsState extends State<CartDetails> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white54,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: Offset(0, 3),
-                        ),
-                      ],
                     ),
                     margin: EdgeInsets.all(20),
                     width: 50,

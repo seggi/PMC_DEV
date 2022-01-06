@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pmc_dev/screens/individuals/profile/profile_bottom.dart';
 import 'package:pmc_dev/screens/individuals/profile/profile_top.dart';
 
-class ProfileDetails extends StatefulWidget {
-  ProfileDetails({Key? key}) : super(key: key);
+class ProfilePage extends StatefulWidget {
+  ProfilePage({Key? key}) : super(key: key);
 
   @override
-  _ProfileDetailsState createState() => _ProfileDetailsState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _ProfileDetailsState extends State<ProfileDetails> {
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.white54,
+      backgroundColor: Colors.transparent,
       body: Container(
         child: SafeArea(
             child: Stack(children: [
@@ -151,7 +150,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       width: 50,
                       height: 40,
                       child: IconButton(
-                        onPressed: () => Navigator.of(context).pop(),
+                        onPressed: () => {},
                         icon: Icon(
                           Icons.filter_list,
                           size: 28,
