@@ -189,121 +189,113 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           margin: EdgeInsets.only(top: 120, bottom: 150),
           child: SingleChildScrollView(
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Container(
-                          padding: EdgeInsets.only(
-                              left: 8, right: 8, top: 4, bottom: 4),
-                          // margin: EdgeInsets.only(left: 40, right: 40),
-                          decoration: BoxDecoration(
-                              color: Colors.cyan,
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(24),
-                                bottomRight: Radius.circular(24),
-                                topRight: Radius.circular(24),
-                                topLeft: Radius.circular(24),
-                              )),
-                          child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "All",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              ))),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                          padding: EdgeInsets.only(
-                              left: 8, right: 8, top: 4, bottom: 4),
-                          // margin: EdgeInsets.only(left: 40, right: 40),
-                          decoration: BoxDecoration(
-                              // color: Colors.teal,
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(24),
-                                bottomRight: Radius.circular(24),
-                                topRight: Radius.circular(24),
-                                topLeft: Radius.circular(24),
-                              ),
-                              border: Border.all(color: Colors.cyan)),
-                          child: TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            ProfileDetails()));
-                              },
-                              child: Text(
-                                "My Profile",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              ))),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                          padding: EdgeInsets.only(
-                              left: 8, right: 8, top: 4, bottom: 4),
-                          // margin: EdgeInsets.only(left: 40, right: 40),
-                          decoration: BoxDecoration(
-                              // color: Colors.cyan,
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(24),
-                                bottomRight: Radius.circular(24),
-                                topRight: Radius.circular(24),
-                                topLeft: Radius.circular(24),
-                              ),
-                              border: Border.all(color: Colors.cyan)),
-                          child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Reports",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              ))),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Container(
-                          padding: EdgeInsets.only(
-                              left: 8, right: 8, top: 4, bottom: 4),
-                          // margin: EdgeInsets.only(left: 40, right: 40),
-                          decoration: BoxDecoration(
-                              // color: Colors.cyan,
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(24),
-                                bottomRight: Radius.circular(24),
-                                topRight: Radius.circular(24),
-                                topLeft: Radius.circular(24),
-                              ),
-                              border: Border.all(color: Colors.cyan)),
-                          child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Claim",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600),
-                              )))
-                    ],
+                Container(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                            padding: EdgeInsets.only(
+                                left: 2, right: 2, top: 2, bottom: 2),
+                            decoration: BoxDecoration(
+                                color: Colors.cyan,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(24),
+                                  bottomRight: Radius.circular(24),
+                                  topRight: Radius.circular(24),
+                                  topLeft: Radius.circular(24),
+                                )),
+                            child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  "All",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600),
+                                ))),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(
+                                left: 2, right: 2, top: 2, bottom: 2),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(24),
+                                  bottomRight: Radius.circular(24),
+                                  topRight: Radius.circular(24),
+                                  topLeft: Radius.circular(24),
+                                ),
+                                border: Border.all(color: Colors.cyan)),
+                            child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              ProfileDetails()));
+                                },
+                                child: Text(
+                                  "My Profile",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600),
+                                ))),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(
+                                left: 2, right: 2, top: 2, bottom: 2),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(24),
+                                  bottomRight: Radius.circular(24),
+                                  topRight: Radius.circular(24),
+                                  topLeft: Radius.circular(24),
+                                ),
+                                border: Border.all(color: Colors.cyan)),
+                            child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  "Reports",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600),
+                                ))),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                            padding: EdgeInsets.only(
+                                left: 2, right: 2, top: 2, bottom: 2),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(24),
+                                  bottomRight: Radius.circular(24),
+                                  topRight: Radius.circular(24),
+                                  topLeft: Radius.circular(24),
+                                ),
+                                border: Border.all(color: Colors.cyan)),
+                            child: TextButton(
+                                onPressed: () {},
+                                child: Text(
+                                  "Claim",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600),
+                                )))
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
