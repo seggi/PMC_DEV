@@ -14,7 +14,7 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
-  int index = 1;
+  int index = 2;
   final screens = [
     NotificationPage(),
     DashBoardPage(),
