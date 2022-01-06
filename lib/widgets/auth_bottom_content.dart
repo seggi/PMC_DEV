@@ -2,11 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/auth/loginpage.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_five.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_four.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_one.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_three.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_two.dart';
+import 'package:pmc_dev/screens/individuals/signup_form/singup_page_form_one.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/pwd_input.dart';

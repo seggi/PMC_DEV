@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_two.dart';
+import 'package:pmc_dev/screens/auth/loginpage.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
-class SignUpFormOne extends StatefulWidget {
-  SignUpFormOne({Key? key}) : super(key: key);
+class SignUpFormSix extends StatefulWidget {
+  SignUpFormSix({Key? key}) : super(key: key);
 
   @override
-  _SignUpFormOneState createState() => _SignUpFormOneState();
+  _SignUpFormSixState createState() => _SignUpFormSixState();
 }
 
-class _SignUpFormOneState extends State<SignUpFormOne> {
+class _SignUpFormSixState extends State<SignUpFormSix> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -34,15 +34,21 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldLeft("Enter full name", Icons.person),
+                            formFieldRight("Bank Name", Icons.account_balance),
                             SizedBox(
                               height: 20,
                             ),
-                            formFieldRight("Phone number", Icons.phone_android),
+                            formFieldRight(
+                                "Account Type", Icons.shopping_bag_outlined),
                             SizedBox(
                               height: 20,
                             ),
-                            formFieldRight("Your email", Icons.email),
+                            formFieldLeft("Account Number", Icons.bar_chart),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldLeft(
+                                "Currency", Icons.attach_money_rounded),
                             SizedBox(
                               height: 40,
                             ),
@@ -52,13 +58,13 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => SignUpFormTwo()));
+                                        builder: (context) => LoginPage()));
                               },
                             )
                           ],
                         ),
                       ),
-                      "",
+                      "Bank details",
                       "Sign In"),
                   Positioned(
                     child: ClipPath(
