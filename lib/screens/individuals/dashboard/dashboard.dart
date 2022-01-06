@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/dashboard_product_box.dart';
+import 'package:pmc_dev/screens/individuals/profile/profile_details.dart';
 
 class DashBoardScreen extends StatefulWidget {
   DashBoardScreen({Key? key}) : super(key: key);
@@ -238,7 +239,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                               ),
                               border: Border.all(color: Colors.cyan)),
                           child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ProfileDetails()));
+                              },
                               child: Text(
                                 "My Profile",
                                 style: TextStyle(
