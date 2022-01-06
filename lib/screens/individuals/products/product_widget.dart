@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/dashboard/product_details.dart';
+import 'package:pmc_dev/screens/individuals/products/product_details.dart';
 
 Widget productDisplay(context) {
   return Container(

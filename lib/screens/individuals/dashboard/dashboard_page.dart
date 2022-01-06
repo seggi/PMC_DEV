@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/dashboard_product_box.dart';
 import 'package:pmc_dev/screens/individuals/profile/profile_page.dart';
+import 'package:pmc_dev/screens/individuals/reports/report_page.dart';
 
 class DashBoardPage extends StatefulWidget {
   DashBoardPage({Key? key}) : super(key: key);
@@ -141,8 +142,8 @@ class _DashBoardPageState extends State<DashBoardPage> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
-                            padding: EdgeInsets.only(
-                                left: 2, right: 2, top: 2, bottom: 2),
+                            width: 80,
+                            height: 35,
                             decoration: BoxDecoration(
                                 color: Colors.cyan,
                                 borderRadius: BorderRadius.only(
@@ -161,11 +162,11 @@ class _DashBoardPageState extends State<DashBoardPage> {
                                       fontWeight: FontWeight.w600),
                                 ))),
                         SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         Container(
-                            padding: EdgeInsets.only(
-                                left: 2, right: 2, top: 2, bottom: 2),
+                            width: 80,
+                            height: 35,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(24),
@@ -189,11 +190,11 @@ class _DashBoardPageState extends State<DashBoardPage> {
                                       fontWeight: FontWeight.w600),
                                 ))),
                         SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         Container(
-                            padding: EdgeInsets.only(
-                                left: 2, right: 2, top: 2, bottom: 2),
+                            width: 80,
+                            height: 35,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(24),
@@ -203,7 +204,12 @@ class _DashBoardPageState extends State<DashBoardPage> {
                                 ),
                                 border: Border.all(color: Colors.cyan)),
                             child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ReportPage()));
+                                },
                                 child: Text(
                                   "Reports",
                                   style: TextStyle(
@@ -212,11 +218,11 @@ class _DashBoardPageState extends State<DashBoardPage> {
                                       fontWeight: FontWeight.w600),
                                 ))),
                         SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         Container(
-                            padding: EdgeInsets.only(
-                                left: 2, right: 2, top: 2, bottom: 2),
+                            width: 80,
+                            height: 35,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(24),

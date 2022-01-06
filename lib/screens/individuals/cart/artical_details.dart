@@ -151,32 +151,16 @@ Widget customCard(imageUrls, titleDesc, tedtDetails, titleW) {
     actionExtentRatio: 0.25,
     child: Container(
         child: articleDetails(imageUrls, titleDesc, tedtDetails, titleW)),
-    actions: <Widget>[
-      IconSlideAction(
-        caption: 'Archive',
-        color: Colors.blue,
-        icon: Icons.archive,
-        // onTap: () => _showSnackBar('Archive'),
-      ),
-      IconSlideAction(
-        caption: 'Share',
-        color: Colors.indigo,
-        icon: Icons.share,
-        // onTap: () => _showSnackBar('Share'),
-      ),
-    ],
     secondaryActions: <Widget>[
-      IconSlideAction(
-        caption: 'More',
-        color: Colors.black45,
-        icon: Icons.more_horiz,
-        // onTap: () => _showSnackBar('More'),
-      ),
-      IconSlideAction(
-        caption: 'Delete',
-        color: Colors.red,
-        icon: Icons.delete,
-        // onTap: () => _showSnackBar('Delete'),
+      Container(
+        padding: EdgeInsets.all(2),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+        child: IconSlideAction(
+            caption: 'Pay Now',
+            color: Colors.cyan[900],
+            icon: Icons.payment_outlined
+            // onTap: () => _showSnackBar('Delete'),
+            ),
       ),
     ],
   );

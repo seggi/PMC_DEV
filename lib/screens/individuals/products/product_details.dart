@@ -17,10 +17,11 @@ class _ProductDetailsState extends State<ProductDetails> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         actions: [
-          Padding(
+          Container(
             padding: EdgeInsets.all(10),
+            margin: EdgeInsets.only(left: 30),
             child: Icon(
-              Icons.library_add_check_sharp,
+              Icons.favorite_border,
               color: Colors.teal,
             ),
           )
@@ -33,7 +34,6 @@ class _ProductDetailsState extends State<ProductDetails> {
               productImageButton(imageBox),
               Container(
                   width: MediaQuery.of(context).size.width,
-                  // height: MediaQuery.of(context).size.height / 2,
                   decoration: BoxDecoration(
                     color: Colors.white24,
                     shape: BoxShape.rectangle,
