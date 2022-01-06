@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/cart/cart_details.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/dashboard.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/product_details.dart';
 
@@ -95,7 +96,7 @@ class _HomePageState extends State<HomePage> {
   Widget mainWidget() {
     var math;
     return Container(
-      padding: EdgeInsets.only(top: 40, left: 20, right: 20, bottom: 8),
+      padding: EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 8),
       child: Column(
         children: [
           Row(
@@ -121,9 +122,17 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 children: [
-                  Icon(
-                    Icons.shopping_cart_rounded,
-                    color: Colors.white70,
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CartDetails()));
+                    },
+                    icon: Icon(
+                      Icons.shopping_cart_rounded,
+                      color: Colors.white70,
+                    ),
                   ),
                   SizedBox(
                     width: 5,

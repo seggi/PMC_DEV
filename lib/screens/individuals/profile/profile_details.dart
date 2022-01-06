@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pmc_dev/screens/individuals/profile/profile_bottom.dart';
+import 'package:pmc_dev/screens/individuals/profile/profile_top.dart';
 
 class ProfileDetails extends StatefulWidget {
   ProfileDetails({Key? key}) : super(key: key);
@@ -13,144 +16,154 @@ class _ProfileDetailsState extends State<ProfileDetails> {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: Colors.white54,
-        body: Container(
-          child: SafeArea(
-            child: SingleChildScrollView(
-                child: Stack(children: [
-              Container(
-                  color: Colors.black87,
-                  child: Container(
-                    child: Column(
-                      children: [
-                        // Image Box
-                        Container(
-                          margin: EdgeInsets.only(bottom: 20),
-                          padding: EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                              color: Colors.black87,
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(24),
-                                bottomLeft: Radius.circular(24),
-                              )),
-                          child: Stack(children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  width: 200,
-                                  margin: EdgeInsets.only(top: 60, left: 40),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+      backgroundColor: Colors.white54,
+      body: Container(
+        child: SafeArea(
+            child: Stack(children: [
+          Container(
+              color: Colors.black,
+              child: SingleChildScrollView(
+                child: Container(
+                  child: Column(
+                    children: [
+                      // Image Box
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white12,
+                            borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(32),
+                              bottomLeft: Radius.circular(32),
+                            )),
+                        child: Column(
+                          children: [imageProfile(), profileId()],
+                        ),
+                      ),
+
+                      Container(
+                        child: Column(
+                          children: [
+                            Divider(
+                              height: 30,
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 32, right: 32),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Bank Details",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Row(
                                     children: [
-                                      Container(
-                                        width: 120,
-                                        height: 120,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://image.shutterstock.com/image-photo/puduchery-india-december-circa-2018-260nw-1320939845.jpg"),
-                                              fit: BoxFit.fill),
-                                        ),
-                                      ),
-                                      Divider(),
-                                      Text(
-                                        "Kamali Jean",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      Divider(),
-                                      Text(
-                                        "kamali@gmail.com",
-                                        style: TextStyle(
-                                            color: Colors.white54,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w600),
-                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: Icon(
+                                            Icons.more_vert,
+                                            color: Colors.white30,
+                                          ))
                                     ],
-                                  ),
-                                ),
-                                SizedBox(width: 20),
-                                Container(
-                                  width: 50,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white12,
-                                      borderRadius: BorderRadius.only(
-                                        bottomRight: Radius.circular(12),
-                                        bottomLeft: Radius.circular(12),
-                                        topRight: Radius.circular(12),
-                                        topLeft: Radius.circular(12),
-                                      )),
-                                  child: Column(
-                                    children: [],
-                                  ),
-                                ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Column(
+                              children: [
+                                customProfileTile(
+                                    'https://play-lh.googleusercontent.com/jnzg6fM-5gconn3DzMyVms2Qh_JSK5h4JmuXLQne2lANU2akYUhvRzZkTBoWlxd90A',
+                                    "Cogebanque",
+                                    "0004-0123-4598"),
+                                customProfileTileOther(
+                                    Icons.account_balance_wallet,
+                                    "Monthly Deduction",
+                                    "250,000Rwf"),
+                                customProfileTileOther(
+                                    Icons.account_balance_wallet,
+                                    "Salary",
+                                    "700,000Rwf"),
                               ],
                             ),
-                          ]),
+                            Container(
+                              padding:
+                                  EdgeInsets.only(left: 32, right: 32, top: 20),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Personal Details",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Column(
+                              children: [
+                                Divider(
+                                  height: 10,
+                                ),
+                                customProfileTileOther(Icons.wallet_travel,
+                                    "Job Title", "Marketing Manager"),
+                                customProfileTileOther(Icons.account_balance,
+                                    "Salary", "Bank of Kigali"),
+                              ],
+                            ),
+                            Divider(
+                              height: 20,
+                            ),
+                          ],
                         ),
-
-                        Container(
-                          width: width,
-                          margin: EdgeInsets.only(bottom: 20),
-                          padding: EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                              // color: Colors.black87,
-                              borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(24),
-                            bottomLeft: Radius.circular(24),
-                          )),
-                          child: Text(
-                            "DDDD",
-                          ),
-                        )
-                      ],
-                    ),
-                  )),
-              Positioned(
-                  child: Container(
-                width: width,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      child: Container(
-                          margin: EdgeInsets.all(20),
-                          width: 50,
-                          height: 40,
-                          child: IconButton(
-                            onPressed: () => Navigator.of(context).pop(),
-                            icon: Icon(
-                              Icons.arrow_back_rounded,
-                              size: 28,
-                              color: Colors.white,
-                            ),
-                          )),
-                    ),
-                    Container(
-                      child: Container(
-                          margin: EdgeInsets.all(20),
-                          width: 50,
-                          height: 40,
-                          child: IconButton(
-                            onPressed: () => Navigator.of(context).pop(),
-                            icon: Icon(
-                              Icons.menu_sharp,
-                              size: 28,
-                              color: Colors.white,
-                            ),
-                          )),
-                    ),
-                  ],
+                      )
+                    ],
+                  ),
                 ),
-              ))
-            ])),
-          ),
-        ));
+              )),
+          Positioned(
+              child: Container(
+            width: width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  child: Container(
+                      margin: EdgeInsets.all(20),
+                      width: 50,
+                      height: 40,
+                      child: IconButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        icon: Icon(
+                          Icons.west_outlined,
+                          size: 28,
+                          color: Colors.white,
+                        ),
+                      )),
+                ),
+                Container(
+                  child: Container(
+                      margin: EdgeInsets.all(20),
+                      width: 50,
+                      height: 40,
+                      child: IconButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        icon: Icon(
+                          Icons.filter_list,
+                          size: 28,
+                          color: Colors.white,
+                        ),
+                      )),
+                ),
+              ],
+            ),
+          ))
+        ])),
+      ),
+    );
   }
 }
