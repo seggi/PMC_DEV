@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/auth/loginpage_form.dart';
-import 'package:pmc_dev/screens/individuals/dashboard/home_page.dart';
+import 'package:pmc_dev/screens/individuals/start_page.dart';
 
 Widget customBtn(context, btnIcon, btnText, btnColor, btnTextColor) {
   return Container(
@@ -80,7 +80,7 @@ Widget signInBtn(context, btnText, btnColor, btnTextColor) {
     child: TextButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => HomePage()));
+              context, MaterialPageRoute(builder: (context) => StartPage()));
         },
         child: Column(
           children: [

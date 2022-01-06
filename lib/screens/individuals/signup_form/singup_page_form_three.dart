@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/auth/loginpage.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_five.dart';
+import 'package:pmc_dev/screens/individuals/signup_form/singup_page_form_four.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
-class SignUpFormSix extends StatefulWidget {
-  SignUpFormSix({Key? key}) : super(key: key);
+class SignUpFormThree extends StatefulWidget {
+  SignUpFormThree({Key? key}) : super(key: key);
 
   @override
-  _SignUpFormSixState createState() => _SignUpFormSixState();
+  _SignUpFormThreeState createState() => _SignUpFormThreeState();
 }
 
-class _SignUpFormSixState extends State<SignUpFormSix> {
+class _SignUpFormThreeState extends State<SignUpFormThree> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -35,21 +34,16 @@ class _SignUpFormSixState extends State<SignUpFormSix> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldRight("Bank Name", Icons.account_balance),
+                            formFieldRight("Set password", Icons.vpn_key_sharp),
                             SizedBox(
                               height: 20,
                             ),
                             formFieldRight(
-                                "Account Type", Icons.shopping_bag_outlined),
+                                "Confirm password", Icons.vpn_key_sharp),
                             SizedBox(
                               height: 20,
                             ),
-                            formFieldLeft("Account Number", Icons.bar_chart),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft(
-                                "Currency", Icons.attach_money_rounded),
+                            formFieldLeft("Enter OTP code", Icons.fingerprint),
                             SizedBox(
                               height: 40,
                             ),
@@ -59,13 +53,14 @@ class _SignUpFormSixState extends State<SignUpFormSix> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => LoginPage()));
+                                        builder: (context) =>
+                                            SignUpFormFour()));
                               },
                             )
                           ],
                         ),
                       ),
-                      "Bank details",
+                      "Account security details",
                       "Sign In"),
                   Positioned(
                     child: ClipPath(

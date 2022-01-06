@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_four.dart';
+import 'package:pmc_dev/screens/individuals/signup_form/singup_page_form_three.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
-class SignUpFormThree extends StatefulWidget {
-  SignUpFormThree({Key? key}) : super(key: key);
+class SignUpFormTwo extends StatefulWidget {
+  SignUpFormTwo({Key? key}) : super(key: key);
 
   @override
-  _SignUpFormThreeState createState() => _SignUpFormThreeState();
+  _SignUpFormTwoState createState() => _SignUpFormTwoState();
 }
 
-class _SignUpFormThreeState extends State<SignUpFormThree> {
+class _SignUpFormTwoState extends State<SignUpFormTwo> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -34,16 +34,16 @@ class _SignUpFormThreeState extends State<SignUpFormThree> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldRight("Set password", Icons.vpn_key_sharp),
+                            formFieldLeft("Upload profile image", Icons.image),
                             SizedBox(
                               height: 20,
                             ),
                             formFieldRight(
-                                "Confirm password", Icons.vpn_key_sharp),
+                                "Enter full address", Icons.location_on),
                             SizedBox(
                               height: 20,
                             ),
-                            formFieldLeft("Enter OTP code", Icons.fingerprint),
+                            formFieldRight("Select your gender", Icons.female),
                             SizedBox(
                               height: 40,
                             ),
@@ -54,13 +54,13 @@ class _SignUpFormThreeState extends State<SignUpFormThree> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            SignUpFormFour()));
+                                            SignUpFormThree()));
                               },
                             )
                           ],
                         ),
                       ),
-                      "Account security details",
+                      "Personal information",
                       "Sign In"),
                   Positioned(
                     child: ClipPath(

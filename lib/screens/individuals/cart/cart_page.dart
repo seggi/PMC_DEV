@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:pmc_dev/screens/individuals/cart/artical_details.dart';
+import 'package:pmc_dev/screens/individuals/cart/subtotal.dart';
 
-class CartDetails extends StatefulWidget {
-  CartDetails({Key? key}) : super(key: key);
+class CartPage extends StatefulWidget {
+  CartPage({Key? key}) : super(key: key);
 
   @override
-  _CartDetailsState createState() => _CartDetailsState();
+  _CartPageState createState() => _CartPageState();
 }
 
-class _CartDetailsState extends State<CartDetails> {
+class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: Colors.white54,
+        backgroundColor: Colors.transparent,
         body: Container(
             child: SafeArea(
                 child: Stack(children: [
           Container(
+            height: height,
+            color: Colors.white10,
             child: SingleChildScrollView(
               child: Container(
                 width: width,
-                height: height,
                 margin: EdgeInsets.only(top: 10),
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
@@ -40,30 +43,40 @@ class _CartDetailsState extends State<CartDetails> {
                       SizedBox(
                         height: 40,
                       ),
-                      Column(
-                        children: [
-                          articleDetails(
-                              "https://ae01.alicdn.com/kf/Ha8163ad4dd124f73b418f390179a1febE/Basketball-Shoes-Men-Sports-Shoes-High-Tops-Mens-Basketball-Sneakers-Athletics-Basket-Shoes-Outdoor-Men-Sneakers.jpg",
-                              "Men basket",
-                              "Rwf1,200,000",
-                              "Reebok Pump"),
-                          SizedBox(
-                            height: 10,
+                      itemList(),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white24,
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                            topLeft: Radius.circular(12),
+                            bottomLeft: Radius.circular(12),
                           ),
-                          articleDetails(
-                              "https://www.onceuponachef.com/images/2009/09/Pumpkin-Bread-100-760x621.jpg",
-                              "Bread",
-                              "Rwf 700,000",
-                              "Sliced bread"),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          articleDetails(
-                              "https://api.time.com/wp-content/uploads/2016/04/hp-spectre-13-3_aerial-view.jpg",
-                              "Computer",
-                              "Rwf700,000",
-                              "Hp Elitebook")
-                        ],
+                        ),
+                        child: Column(
+                          children: [
+                            subTotalBox(),
+                            Divider(
+                              color: Colors.white12,
+                              thickness: 1,
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(top: 20, bottom: 20),
+                              child: subTotalTile("Total", "2,715,000"),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 60,
                       ),
                     ],
                   ),
@@ -110,14 +123,6 @@ class _CartDetailsState extends State<CartDetails> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white54,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: Offset(0, 3),
-                        ),
-                      ],
                     ),
                     margin: EdgeInsets.all(20),
                     width: 50,
@@ -132,7 +137,44 @@ class _CartDetailsState extends State<CartDetails> {
                     )),
               ],
             ),
-          ))
+          )),
+          Positioned(
+            bottom: 0,
+            child: Container(
+              width: width,
+              padding: EdgeInsets.only(
+                left: 10,
+                right: 10,
+              ),
+              child: Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.only(
+                      top: 20,
+                      bottom: 20,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.cyan,
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(8),
+                        topRight: Radius.circular(8),
+                        topLeft: Radius.circular(8),
+                        bottomLeft: Radius.circular(8),
+                      ),
+                    ),
+                    child: Text("Pay Now",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600)),
+                  ),
+                ),
+              ),
+            ),
+          )
         ]))));
   }
 }

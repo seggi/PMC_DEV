@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/singup_page_form_three.dart';
+import 'package:pmc_dev/screens/individuals/signup_form/singup_page_form_six.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
-class SignUpFormTwo extends StatefulWidget {
-  SignUpFormTwo({Key? key}) : super(key: key);
+class SignUpFormFive extends StatefulWidget {
+  SignUpFormFive({Key? key}) : super(key: key);
 
   @override
-  _SignUpFormTwoState createState() => _SignUpFormTwoState();
+  _SignUpFormFiveState createState() => _SignUpFormFiveState();
 }
 
-class _SignUpFormTwoState extends State<SignUpFormTwo> {
+class _SignUpFormFiveState extends State<SignUpFormFive> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -34,16 +34,32 @@ class _SignUpFormTwoState extends State<SignUpFormTwo> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldLeft("Upload profile image", Icons.image),
+                            formFieldRight("Place of employment", Icons.person),
                             SizedBox(
                               height: 20,
                             ),
                             formFieldRight(
-                                "Enter full address", Icons.location_on),
+                                "Employee address", Icons.location_on),
                             SizedBox(
                               height: 20,
                             ),
-                            formFieldRight("Select your gender", Icons.female),
+                            formFieldLeft(
+                                "Employer tin number", Icons.menu_open_rounded),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldLeft("Employee point of contact",
+                                Icons.control_point_duplicate),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldRight(
+                                "length of contract", Icons.file_copy),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            formFieldRight(
+                                "Years of service", Icons.calendar_today),
                             SizedBox(
                               height: 40,
                             ),
@@ -53,14 +69,13 @@ class _SignUpFormTwoState extends State<SignUpFormTwo> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            SignUpFormThree()));
+                                        builder: (context) => SignUpFormSix()));
                               },
                             )
                           ],
                         ),
                       ),
-                      "Personal information",
+                      "Employer details",
                       "Sign In"),
                   Positioned(
                     child: ClipPath(
