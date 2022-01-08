@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/bottom_widget.dart';
 
+import 'bottom_widget.dart';
 import 'widgets/custom_positioned.dart';
-import 'widgets/notification_number.dart';
 
-class ProductsPage extends StatefulWidget {
-  ProductsPage({Key? key}) : super(key: key);
+class ClaimPage extends StatefulWidget {
+  ClaimPage({Key? key}) : super(key: key);
 
   @override
-  _ProductsPageState createState() => _ProductsPageState();
+  _ClaimPageState createState() => _ClaimPageState();
 }
 
-class _ProductsPageState extends State<ProductsPage> {
+class _ClaimPageState extends State<ClaimPage> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -21,12 +20,14 @@ class _ProductsPageState extends State<ProductsPage> {
         child: Container(
             height: height,
             child: Stack(children: [
+              productListBg(context),
               Container(
                 padding: EdgeInsets.all(0.0),
                 margin: EdgeInsets.only(top: 90),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
+                      // productListBg(context),
                       bottomWidget(context),
                       SizedBox(
                         height: 60,
@@ -40,4 +41,19 @@ class _ProductsPageState extends State<ProductsPage> {
       ),
     );
   }
+}
+
+Widget productListBg(context) {
+  final double height = MediaQuery.of(context).size.height;
+  return Container(
+    height: height,
+    margin: EdgeInsets.only(top: 100),
+    decoration: BoxDecoration(
+      color: Colors.black87,
+      borderRadius: BorderRadius.only(
+        topRight: Radius.circular(24),
+        topLeft: Radius.circular(24),
+      ),
+    ),
+  );
 }

@@ -83,24 +83,26 @@ Widget profileId() {
           SizedBox(
             width: 5,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            child: Column(
-              children: [
-                Text('ID',
-                    style: TextStyle(
-                        color: Colors.white54,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600)),
-                Divider(
-                  height: 5,
-                ),
-                Text('#24037',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600))
-              ],
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                children: [
+                  Text('ID',
+                      style: TextStyle(
+                          color: Colors.white54,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600)),
+                  Divider(
+                    height: 5,
+                  ),
+                  Text('#24037',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600))
+                ],
+              ),
             ),
           ),
           SizedBox(
@@ -110,24 +112,26 @@ Widget profileId() {
               color: Colors.white30,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            child: Column(
-              children: [
-                Text('Tel',
-                    style: TextStyle(
-                        color: Colors.white54,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600)),
-                Divider(
-                  height: 5,
-                ),
-                Text('078356780',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600))
-              ],
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                children: [
+                  Text('Tel',
+                      style: TextStyle(
+                          color: Colors.white54,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600)),
+                  Divider(
+                    height: 5,
+                  ),
+                  Text('078356780',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600))
+                ],
+              ),
             ),
           ),
           SizedBox(
@@ -137,24 +141,26 @@ Widget profileId() {
               color: Colors.white30,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            child: Column(
-              children: [
-                Text('Bank',
-                    style: TextStyle(
-                        color: Colors.white54,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600)),
-                Divider(
-                  height: 5,
-                ),
-                Text('Cogebanque',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600))
-              ],
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                children: [
+                  Text('Bank',
+                      style: TextStyle(
+                          color: Colors.white54,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600)),
+                  Divider(
+                    height: 5,
+                  ),
+                  Text('Cogebanque',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600))
+                ],
+              ),
             ),
           ),
           SizedBox(

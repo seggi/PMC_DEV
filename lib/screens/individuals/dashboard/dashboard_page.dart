@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/claim/claim_page.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/dashboard_product_box.dart';
 import 'package:pmc_dev/screens/individuals/profile/profile_page.dart';
 import 'package:pmc_dev/screens/individuals/reports/report_page.dart';
@@ -232,7 +233,12 @@ class _DashBoardPageState extends State<DashBoardPage> {
                                 ),
                                 border: Border.all(color: Colors.cyan)),
                             child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ClaimPage()));
+                                },
                                 child: Text(
                                   "Claim",
                                   style: TextStyle(
