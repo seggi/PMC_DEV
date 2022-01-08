@@ -20,7 +20,6 @@ Widget customCard(wImg) {
   return Container(
     alignment: Alignment.center,
     margin: EdgeInsets.only(top: 10),
-    width: 350,
     color: Colors.black87,
     child: SingleChildScrollView(
       child: Card(

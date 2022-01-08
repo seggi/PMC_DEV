@@ -10,10 +10,17 @@ Widget mainWiget(context) {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         optionBtn(),
-        customCard(
-            "https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPPARE-MEN-S-LPARE106424044EC9BCD/1621073714784_0..jpeg"),
-        customCard(
-            "https://9to5mac.com/wp-content/uploads/sites/6/2021/08/iphone-13-crop.jpg?quality=82&strip=all"),
+        Container(
+          padding: EdgeInsets.only(left: 20, right: 20),
+          child: Column(
+            children: [
+              customCard(
+                  "https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPPARE-MEN-S-LPARE106424044EC9BCD/1621073714784_0..jpeg"),
+              customCard(
+                  "https://9to5mac.com/wp-content/uploads/sites/6/2021/08/iphone-13-crop.jpg?quality=82&strip=all"),
+            ],
+          ),
+        )
       ],
     ),
   );

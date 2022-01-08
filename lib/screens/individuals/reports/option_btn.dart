@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 Widget optionBtn() {
   return Container(
     margin: EdgeInsets.only(top: 80),
-    padding: EdgeInsets.all(20.0),
+    padding: EdgeInsets.all(10.0),
     alignment: Alignment.center,
     child: SingleChildScrollView(
       scrollDirection: Axis.horizontal,

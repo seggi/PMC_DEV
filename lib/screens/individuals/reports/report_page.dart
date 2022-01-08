@@ -64,10 +64,6 @@ class _ReportPageState extends State<ReportPage> {
                               color: Colors.white),
                         ),
                         Container(
-                            // decoration: BoxDecoration(
-                            //   shape: BoxShape.circle,
-                            //   color: Colors.white54,
-                            // ),
                             margin: EdgeInsets.all(20),
                             width: 50,
                             height: 40,
