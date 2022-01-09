@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/claim/insuarance%20claim/insuarance_claim_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
+
+import '../bottom_widget.dart';
 
 Widget bottomWidget(context) {
   return Container(
@@ -36,84 +37,6 @@ Widget bottomWidget(context) {
       ],
     ),
   );
-}
-
-Widget gridItemBox(context) {
-  return Column(
-    children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Flexible(
-            child: optionBtn(
-                context, "Insurance claim", Icons.accessible_forward_outlined,
-                () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InsuaranceClaimPage()));
-            }),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Flexible(
-              child: optionBtn(
-                  context, "Bank claim", Icons.account_balance, () {})),
-        ],
-      ),
-      SizedBox(
-        height: 10,
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Flexible(
-            child: optionBtn(
-                context, "Service claim", Icons.bookmarks_outlined, () {}),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Flexible(
-              child: optionBtn(
-                  context, "Product claim", Icons.card_giftcard_sharp, () {})),
-        ],
-      ),
-    ],
-  );
-}
-
-Widget optionBtn(context, textBtn, iconBtn, fn) {
-  return Container(
-      width: 150,
-      height: 150,
-      padding: EdgeInsets.all(8),
-      decoration: BoxDecoration(
-          color: pmcWhite30,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.black12)),
-      child: TextButton(
-        onPressed: fn,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              iconBtn,
-              size: 40,
-              color: pmcWhite70,
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              textBtn,
-              style: TextStyle(fontSize: 14, color: pmcWhite70),
-            )
-          ],
-        ),
-      ));
 }
 
 Widget numberBox() {
