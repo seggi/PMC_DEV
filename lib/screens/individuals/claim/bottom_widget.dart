@@ -4,12 +4,12 @@ import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
 Widget bottomWidget(context) {
   return Container(
-    padding: EdgeInsets.all(20),
     child: Column(
       children: [
         Container(
           alignment: Alignment.center,
           padding: EdgeInsets.all(20),
+          margin: EdgeInsets.only(top: 20),
           child: Text(
             "Hello Jean Paul",
             style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
@@ -27,150 +27,198 @@ Widget bottomWidget(context) {
                 color: pmcWhite54, fontWeight: FontWeight.w600, fontSize: 11),
           ),
         ),
-        gridItemBox()
+        gridItemBox(context),
+        SizedBox(
+          height: 30,
+        ),
+        numberBox(),
+        bottomItem(context)
       ],
     ),
   );
 }
 
-Widget gridItemBox() {
+Widget gridItemBox(context) {
   return Column(
     children: [
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              width: 150,
-              height: 150,
-              decoration: BoxDecoration(
-                  color: pmcWhite30, borderRadius: BorderRadius.circular(12)),
-              child: GestureDetector(
-                child: Column(
-                  children: [
-                    Icon(
-                      Icons.accessible_rounded,
-                      color: pmcWhite54,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Flexible(
-                      child: Text(
-                        "Insurance claim",
-                        style: TextStyle(
-                            color: pmcWhite54,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            child: optionBtn(context, "Insurance claim",
+                Icons.accessible_forward_outlined, () {}),
+          ),
+          SizedBox(
+            width: 10,
           ),
           Flexible(
-            child: Container(
-              width: 150,
-              height: 150,
-              padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                  color: pmcWhite30, borderRadius: BorderRadius.circular(12)),
-              child: GestureDetector(
-                child: Column(
-                  children: [
-                    Icon(
-                      Icons.account_balance,
-                      color: pmcWhite54,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Bank claim",
-                      style: TextStyle(
-                          color: pmcWhite54,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+              child: optionBtn(
+                  context, "Bank claim", Icons.account_balance, () {})),
         ],
       ),
       SizedBox(
-        height: 20,
+        height: 10,
       ),
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              width: 150,
-              height: 150,
-              decoration: BoxDecoration(
-                  color: pmcWhite30, borderRadius: BorderRadius.circular(12)),
-              child: GestureDetector(
-                child: Column(
-                  children: [
-                    Icon(
-                      Icons.accessible_rounded,
-                      color: pmcWhite54,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Insurance claim",
-                      style: TextStyle(
-                          color: pmcWhite54,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            child: optionBtn(
+                context, "Service claim", Icons.bookmarks_outlined, () {}),
+          ),
+          SizedBox(
+            width: 10,
           ),
           Flexible(
+              child: optionBtn(
+                  context, "Product claim", Icons.card_giftcard_sharp, () {})),
+        ],
+      ),
+    ],
+  );
+}
+
+Widget optionBtn(context, textBtn, iconBtn, fn) {
+  return Container(
+      width: 150,
+      height: 150,
+      padding: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+          color: pmcWhite30,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: Colors.black12)),
+      child: TextButton(
+        onPressed: fn,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              iconBtn,
+              size: 40,
+              color: pmcWhite70,
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              textBtn,
+              style: TextStyle(fontSize: 14, color: pmcWhite70),
+            )
+          ],
+        ),
+      ));
+}
+
+Widget numberBox() {
+  return Container(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          padding: EdgeInsets.only(left: 8.0, right: 8.0),
+          decoration: BoxDecoration(
+            color: pmcWhite30,
+            borderRadius: BorderRadius.only(
+              // bottomRight: Radius.circular(12),
+              topRight: Radius.circular(24),
+              topLeft: Radius.circular(24),
+              // bottomLeft: Radius.circular(12),
+            ),
+          ),
+          child: Text(
+            "1",
+            style: TextStyle(
+                fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
+          ),
+        ),
+        SizedBox(
+          width: 5,
+        ),
+        Text(
+          "2",
+          style: TextStyle(
+              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
+        ),
+        SizedBox(
+          width: 5,
+        ),
+        Text(
+          "3",
+          style: TextStyle(
+              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
+        ),
+        SizedBox(
+          width: 5,
+        ),
+        Text(
+          "4",
+          style: TextStyle(
+              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
+        ),
+        SizedBox(
+          width: 5,
+        ),
+        Text(
+          "5",
+          style: TextStyle(
+              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget bottomItem(context) {
+  final double width = MediaQuery.of(context).size.width;
+  return Container(
+      width: MediaQuery.of(context).size.width,
+      padding: EdgeInsets.only(left: 8.0, right: 8.0),
+      decoration: BoxDecoration(
+        // color: pmcWhite30,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(24),
+          topLeft: Radius.circular(24),
+        ),
+      ),
+      child: Column(
+        children: [
+          Center(
             child: Container(
-              width: 150,
-              height: 150,
-              padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                  color: pmcWhite30, borderRadius: BorderRadius.circular(12)),
-              child: GestureDetector(
-                child: Column(
-                  children: [
-                    Icon(
-                      Icons.account_balance,
-                      color: pmcWhite54,
-                      size: 40,
+              width: width,
+              padding: EdgeInsets.only(
+                left: 10,
+                right: 10,
+              ),
+              child: Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.only(
+                      top: 20,
+                      bottom: 20,
                     ),
-                    SizedBox(
-                      height: 10,
+                    decoration: BoxDecoration(
+                      color: Colors.cyan,
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(8),
+                        topRight: Radius.circular(8),
+                        topLeft: Radius.circular(8),
+                        bottomLeft: Radius.circular(8),
+                      ),
                     ),
-                    Text(
-                      "Bank claim",
-                      style: TextStyle(
-                          color: pmcWhite54,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14),
-                    ),
-                  ],
+                    child: Text("Pay Now",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600)),
+                  ),
                 ),
               ),
             ),
           ),
         ],
-      )
-    ],
-  );
+      ));
 }
