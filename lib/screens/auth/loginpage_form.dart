@@ -53,18 +53,21 @@ class _LoginPageFormState extends State<LoginPageForm> {
 
   Widget firstCircle() {
     return Container(
-      height: MediaQuery.of(context).size.height / 2.5,
-      margin: EdgeInsets.only(left: 30, right: 30),
-      decoration: BoxDecoration(
-        color: Colors.white12,
-        borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(180),
-          topRight: Radius.circular(180),
-          topLeft: Radius.circular(180),
-          bottomLeft: Radius.circular(180),
-        ),
-      ),
-    );
+        height: MediaQuery.of(context).size.height / 2,
+        margin: EdgeInsets.only(left: 30, right: 30),
+        decoration: BoxDecoration(color: Colors.white12, shape: BoxShape.circle)
+        // height: MediaQuery.of(context).size.height / 2.5,
+        // margin: EdgeInsets.only(left: 30, right: 30),
+        // decoration: BoxDecoration(
+        //   color: Colors.white12,
+        //   borderRadius: BorderRadius.only(
+        //     bottomRight: Radius.circular(180),
+        //     topRight: Radius.circular(180),
+        //     topLeft: Radius.circular(180),
+        //     bottomLeft: Radius.circular(180),
+        //   ),
+        // ),
+        );
   }
 
   Widget secondScreen() {
@@ -89,14 +92,14 @@ class _LoginPageFormState extends State<LoginPageForm> {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 24),
+                    fontSize: 18),
               ),
               Text(
                 ")",
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 24),
+                    fontSize: 18),
               ),
               Text(
                 ")",
@@ -110,7 +113,7 @@ class _LoginPageFormState extends State<LoginPageForm> {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 18),
+                    fontSize: 16),
               ),
             ],
           )),

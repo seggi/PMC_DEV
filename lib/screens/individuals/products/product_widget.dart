@@ -9,18 +9,24 @@ Widget productDisplay(context) {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          productImageButton(context,
-              'https://m.media-amazon.com/images/I/61KMsxswCRL._UX569_.jpg'),
+          productImageButton(
+              context,
+              'https://m.media-amazon.com/images/I/61KMsxswCRL._UX569_.jpg',
+              () {}),
           SizedBox(
             width: 10,
           ),
-          productImageButton(context,
-              'https://i.pinimg.com/736x/00/fe/e7/00fee757785ee5df41d889588d903e58.jpg'),
+          productImageButton(
+              context,
+              'https://i.pinimg.com/736x/00/fe/e7/00fee757785ee5df41d889588d903e58.jpg',
+              () {}),
           SizedBox(
             width: 10,
           ),
-          productImageButton(context,
-              'https://m.media-amazon.com/images/I/71vmyxuI92L._AC_UL1500_.jpg'),
+          productImageButton(
+              context,
+              'https://m.media-amazon.com/images/I/71vmyxuI92L._AC_UL1500_.jpg',
+              () {}),
         ],
       ),
     ),
@@ -55,16 +61,9 @@ Widget rotateBox(boxColor, boxIcon) {
   );
 }
 
-Widget productImageButton(context, imageUrls) {
+Widget productImageButton(context, imageUrls, fn) {
   return TextButton(
-    onPressed: () {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => ProductDetails(
-                    imageBox: imageUrls,
-                  )));
-    },
+    onPressed: fn,
     child: Container(
       width: 180,
       height: 250,

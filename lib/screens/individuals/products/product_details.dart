@@ -84,14 +84,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                                     "Italian Suit",
                                     style: TextStyle(
                                         color: Colors.white70,
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.w800),
                                   ),
                                   Text(
                                     "Rwf 40.00",
                                     style: TextStyle(
                                         color: Colors.teal,
-                                        fontSize: 24,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.w800),
                                   )
                                 ],
@@ -154,76 +154,90 @@ class _ProductDetailsState extends State<ProductDetails> {
                                         rotateBox(Colors.white24, "...")
                                       ],
                                     ),
-                                    Text("Rwf 300,000",
-                                        style: TextStyle(
-                                            color: Colors.teal,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w800))
+                                    Flexible(
+                                      child: Text("Rwf 300,000",
+                                          style: TextStyle(
+                                              color: Colors.teal,
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w800)),
+                                    )
                                   ],
                                 ),
                               ),
                               SizedBox(height: 30),
                               Row(
                                 children: [
-                                  Container(
-                                    padding: EdgeInsets.all(4),
-                                    decoration: BoxDecoration(
-                                        color: Colors.black54,
-                                        shape: BoxShape.rectangle,
-                                        borderRadius: BorderRadius.circular(12),
-                                        border: Border.all(color: Colors.teal)),
-                                    child: TextButton(
-                                      onPressed: () {},
-                                      child: Row(
-                                        children: [
-                                          Icon(
-                                            Icons.storage_outlined,
-                                            color: Colors.teal,
-                                            size: 20,
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Text("Pay Now",
-                                              style: TextStyle(
-                                                  color: Colors.teal,
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w800))
-                                        ],
+                                  Flexible(
+                                    child: Container(
+                                      padding: EdgeInsets.all(4),
+                                      decoration: BoxDecoration(
+                                          color: Colors.black54,
+                                          shape: BoxShape.rectangle,
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                          border:
+                                              Border.all(color: Colors.teal)),
+                                      child: TextButton(
+                                        onPressed: () {},
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              Icons.storage_outlined,
+                                              color: Colors.teal,
+                                              size: 20,
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text("Pay Now",
+                                                style: TextStyle(
+                                                    color: Colors.teal,
+                                                    fontSize: 18,
+                                                    fontWeight:
+                                                        FontWeight.w800))
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Container(
-                                    width: 230,
-                                    padding: EdgeInsets.all(4),
-                                    decoration: BoxDecoration(
-                                        color: Colors.teal,
-                                        shape: BoxShape.rectangle,
-                                        borderRadius: BorderRadius.circular(12),
-                                        border: Border.all(color: Colors.teal)),
-                                    child: TextButton(
-                                      onPressed: () {},
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text("Pay later",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w800)),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Icon(
-                                            Icons.arrow_forward_ios_outlined,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                        ],
+                                  Flexible(
+                                    child: Container(
+                                      // width: 200,
+                                      padding: EdgeInsets.all(4),
+                                      decoration: BoxDecoration(
+                                          color: Colors.teal,
+                                          shape: BoxShape.rectangle,
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                          border:
+                                              Border.all(color: Colors.teal)),
+                                      child: TextButton(
+                                        onPressed: () {},
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Flexible(
+                                              child: Text("Pay later",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.w800)),
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Icon(
+                                              Icons.arrow_forward_ios_outlined,
+                                              color: Colors.white,
+                                              size: 20,
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
