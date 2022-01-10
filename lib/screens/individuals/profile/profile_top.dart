@@ -99,7 +99,7 @@ Widget profileId() {
                   Text('#24037',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
+                          fontSize: 12,
                           fontWeight: FontWeight.w600))
                 ],
               ),
@@ -128,7 +128,7 @@ Widget profileId() {
                   Text('078356780',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
+                          fontSize: 12,
                           fontWeight: FontWeight.w600))
                 ],
               ),
@@ -157,7 +157,7 @@ Widget profileId() {
                   Text('Cogebanque',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
+                          fontSize: 12,
                           fontWeight: FontWeight.w600))
                 ],
               ),

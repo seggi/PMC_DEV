@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/auth/loginpage.dart';
 import 'package:pmc_dev/screens/individuals/signup_form/singup_page_form_one.dart';
@@ -27,10 +25,10 @@ Widget authBottomContents(
                     Text(scrTitleText,
                         style: TextStyle(
                             fontWeight: FontWeight.w900,
-                            fontSize: 28,
+                            fontSize: 20,
                             color: Colors.white)),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                     scrTitleText == "Sign In"
                         ? SizedBox(
@@ -171,7 +169,7 @@ Widget mainButtonContent(context) {
         child: Text("What Best Describes You?",
             style: TextStyle(
                 fontWeight: FontWeight.w600,
-                fontSize: 16,
+                fontSize: 14,
                 color: Colors.white)),
       ),
       SizedBox(height: 20),

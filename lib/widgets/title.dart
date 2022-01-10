@@ -22,14 +22,14 @@ Widget circleWiget() {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 24),
+                    fontSize: 18),
               ),
               Text(
                 ")",
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 24),
+                    fontSize: 18),
               ),
               Text(
                 ")",
@@ -43,7 +43,7 @@ Widget circleWiget() {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 18),
+                    fontSize: 16),
               ),
             ],
           )),
@@ -53,23 +53,23 @@ Widget circleWiget() {
   );
 }
 
-Widget firstCircle() {
-  return Center(
-    child: Stack(
-      children: [
-        Positioned(
-            // bottom: 0,
-            child: Container(
-          width: 800,
-          height: 500,
-          decoration: BoxDecoration(
-            // color: Colors.red,
-            shape: BoxShape.rectangle,
+// Widget firstCircle() {
+//   return Center(
+//     child: Stack(
+//       children: [
+//         Positioned(
+//             // bottom: 0,
+//             child: Container(
+//           width: 800,
+//           height: 500,
+//           decoration: BoxDecoration(
+//             // color: Colors.red,
+//             shape: BoxShape.rectangle,
 
-            // border: Border.all(color: Colors.black)
-          ),
-        ))
-      ],
-    ),
-  );
-}
+//             // border: Border.all(color: Colors.black)
+//           ),
+//         ))
+//       ],
+//     ),
+//   );
+// }
