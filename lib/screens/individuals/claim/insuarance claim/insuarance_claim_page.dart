@@ -1,62 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/claim/insuarance%20claim/bottom_widget.dart';
-import 'package:pmc_dev/screens/individuals/products/widgets/custom_positioned.dart';
+import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
 class InsuaranceClaimPage extends StatelessWidget {
-  InsuaranceClaimPage({Key? key}) : super(key: key);
-
-  @override
-  _InsuaranceClaimPageState createState() => _InsuaranceClaimPageState();
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
-@override
-class _InsuaranceClaimPageState extends State<InsuaranceClaimPage> {
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
-    return Scaffold(
-      extendBody: true,
-      body: SafeArea(
-        child: Container(
-            height: height,
-            child: Stack(children: [
-              // productListBg(context),
-              Container(
-                padding: EdgeInsets.all(0.0),
-                margin: EdgeInsets.only(top: 90),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      productListBg(context),
-                      bottomWidget(context),
-                      SizedBox(
-                        height: 60,
-                      )
-                    ],
-                  ),
+    final Size size = MediaQuery.of(context).size;
+    final double padding = 25;
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          width: size.width,
+          height: size.height,
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: padding),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: pmcWhite24,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: Icon(
+                        Icons.shopping_cart,
+                        color: pmcWhite24,
+                      ),
+                    )
+                  ],
                 ),
               ),
-              customPositioned(context)
-            ])),
+            ],
+          ),
+        ),
       ),
     );
   }
-}
-
-Widget productListBg(context) {
-  final double height = MediaQuery.of(context).size.height;
-  return Container(
-    height: height,
-    margin: EdgeInsets.only(top: 100),
-    decoration: BoxDecoration(
-      color: Colors.black87,
-      borderRadius: BorderRadius.only(
-        topRight: Radius.circular(24),
-        topLeft: Radius.circular(24),
-      ),
-    ),
-  );
 }

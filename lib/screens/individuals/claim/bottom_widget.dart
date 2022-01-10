@@ -1,8 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/claim/insuarance%20claim/insuarance_claim_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
 Widget bottomWidget(context) {
+  double screenWidth = window.physicalSize.width;
   return Container(
     child: Column(
       children: [
@@ -39,6 +42,7 @@ Widget bottomWidget(context) {
 }
 
 Widget gridItemBox(context) {
+  double screenWidth = window.physicalSize.width;
   return Column(
     children: [
       Row(
@@ -85,6 +89,7 @@ Widget gridItemBox(context) {
 }
 
 Widget optionBtn(context, textBtn, iconBtn, fn) {
+  double screenWidth = window.physicalSize.width;
   return Container(
       width: 150,
       height: 150,
@@ -117,6 +122,7 @@ Widget optionBtn(context, textBtn, iconBtn, fn) {
 }
 
 Widget numberBox() {
+  double screenWidth = window.physicalSize.width;
   return Container(
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -176,6 +182,7 @@ Widget numberBox() {
 }
 
 Widget bottomItem(context) {
+  double screenWidth = window.physicalSize.width;
   final double width = MediaQuery.of(context).size.width;
   return Container(
       width: MediaQuery.of(context).size.width,
