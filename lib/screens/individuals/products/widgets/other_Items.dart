@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/product_details.dart';
-import 'package:pmc_dev/screens/individuals/products/product_widget.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
+// import 'package:pmc_dev/screens/individuals/products/product_details.dart';
+// import 'package:pmc_dev/screens/individuals/products/product_widget.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
+
+import '../product_widget.dart';
 
 Widget optionItems(context) {
   return Container(
@@ -104,76 +108,139 @@ Widget categoryItem(context) {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            // Flexible(
+            // child: Container(
+            //     height: 180,
+            //     child: productImageButton(
+            //         context,
+            //         'https://cdn.anscommerce.com/catalog/brandstore/johnson/17_7_20/Sale.jpg',
+            //         Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //                 builder: (context) => ProductDetails(
+            //                       imageBox: "",
+            //                     )))
+            //         )),
+            // ),
+
             Flexible(
-              child: Container(
-                  height: 180,
-                  child: productImageButton(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
                       context,
-                      'https://cdn.anscommerce.com/catalog/brandstore/johnson/17_7_20/Sale.jpg',
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ProductDetails(
-                                    imageBox: "",
-                                  ))))),
+                      MaterialPageRoute(
+                          builder: (context) => ConveniencePage(
+                                pgImg:
+                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSegrZzWOWFcaX12TxKy9xqgpXwE42JenTy2A&usqp=CAU',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSegrZzWOWFcaX12TxKy9xqgpXwE42JenTy2A&usqp=CAU"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
             ),
+
             Flexible(
-              child: Container(
-                child: productImageButton(
-                    context,
-                    'https://www.thespruceeats.com/thmb/abx-C65PX-C9s04dCqzzV_QIr9o=/3931x2948/smart/filters:no_upscale()/super-easy-bread-for-beginners-428108-hero-01-a3c09d713f9e4055977a72c391d353c9.jpg',
-                    () {}),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LiquorPage(
+                                pgImg:
+                                    'https://produits.bienmanger.com/35274-0w600h600_Grand_Marnier_Liquor_Cordon_Rouge.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://produits.bienmanger.com/35274-0w600h600_Grand_Marnier_Liquor_Cordon_Rouge.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
               ),
             ),
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Flexible(
-              child: Container(
-                child: productImageButton(
-                    context,
-                    'https://image.made-in-china.com/202f0j00EMGRPDpgsbqJ/Wholesale-Used-Mobile-Phone-Cellphone-for-iPhone-11-11PRO-Max-64GB-32GB-128GB-256GB-New-Unlocked-Original.jpg',
-                    () {}),
-              ),
-            ),
-            Flexible(
-              child: Container(
-                // width: 180,
-                height: 200,
-                child: productImageButton(
-                    context,
-                    'https://kphv.cz/wp-content/uploads/1246280_16061017110043391702.jpg',
-                    () {}),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Flexible(
-              child: Container(
-                width: 180,
-                height: 200,
-                child: productImageButton(
-                    context,
-                    'https://www.afrikmag.com/wp-content/uploads/2020/05/canalplus.jpg',
-                    () {}),
-              ),
-            ),
-            Flexible(
-              child: Container(
-                width: 180,
-                height: 150,
-                child: productImageButton(
-                    context,
-                    'https://i.dawn.com/primary/2018/10/5bcbe259cef7c.jpg',
-                    () {}),
-              ),
-            ),
-          ],
-        )
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //   children: [
+        //     Flexible(
+        //       child: Container(
+        //         child: productImageButton(
+        //             context,
+        //             'https://image.made-in-china.com/202f0j00EMGRPDpgsbqJ/Wholesale-Used-Mobile-Phone-Cellphone-for-iPhone-11-11PRO-Max-64GB-32GB-128GB-256GB-New-Unlocked-Original.jpg',
+        //             () {}),
+        //       ),
+        //     ),
+        //     Flexible(
+        //       child: Container(
+        //         // width: 180,
+        //         height: 200,
+        //         child: productImageButton(
+        //             context,
+        //             'https://kphv.cz/wp-content/uploads/1246280_16061017110043391702.jpg',
+        //             () {}),
+        //       ),
+        //     ),
+        //   ],
+        // ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //   children: [
+        //     Flexible(
+        //       child: Container(
+        //         width: 180,
+        //         height: 200,
+        //         child: productImageButton(
+        //             context,
+        //             'https://www.afrikmag.com/wp-content/uploads/2020/05/canalplus.jpg',
+        //             () {}),
+        //       ),
+        //     ),
+        //     Flexible(
+        //       child: Container(
+        //         width: 180,
+        //         height: 150,
+        //         child: productImageButton(
+        //             context,
+        //             'https://i.dawn.com/primary/2018/10/5bcbe259cef7c.jpg',
+        //             () {}),
+        //       ),
+        //     ),
+        //   ],
+        // )
       ]));
 }
+
+// Widget productImageButton1(context, imageUrls) {
+//   return TextButton(
+//     onPressed: () {
+//       Navigator.push(
+//           context, MaterialPageRoute(builder: (context) => ConveniencePage()));
+//     },
+//     child: Container(
+//       width: MediaQuery.of(context).size.width,
+//       height: MediaQuery.of(context).size.height / 2,
+//       decoration: BoxDecoration(
+//         shape: BoxShape.rectangle,
+//         image:
+//             DecorationImage(image: NetworkImage(imageUrls), fit: BoxFit.fill),
+//       ),
+//     ),
+//   );
+// }
