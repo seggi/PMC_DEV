@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -6,6 +9,7 @@ import 'package:pmc_dev/utils/api.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
+import 'package:pmc_dev/widgets/custom_snackbar.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
 class SignUpFormThree extends StatefulWidget {
@@ -38,33 +42,55 @@ class _SignUpFormThreeState extends State<SignUpFormThree> {
     if (pwd == reppeatPwd && pwd != "" && reppeatPwd != "") {
       var currentInputData = {'password': pwd};
 
-      // final finalData = {...currentInputData, ...userDataPrScr};
-      var url = "https://api.payingtone.com/api/v1/clients/register";
+      Map<String, dynamic> finalData = {
+        ...currentInputData,
+        ...userDataPrScr,
+        "account_type": "individual",
+      };
 
-      var response = await Dio().post(url, data: {
-        "full_names": "full_names should not be empty",
-        "password": "password must",
-        "profile_picture": "profile_picture should not be empty",
-        "account_type": "account_type should not be empty",
-        "gender": "gender should not be empty",
+      var dataCollection = {
+        "full_names": "${finalData["full_names"]}",
+        "password": "${finalData["password"]}",
+        "profile_picture": "${finalData["profile_picture"]}",
+        "account_type": "individual",
+        "gender": "${finalData["gender"]}",
         "address": {
-          "email": "ssss@gmail.com",
-          "phone_number": "098754434",
-          "street_address": "kifff",
-          "city": "ddss",
-          "province": "sdssd",
-          "district": "string",
+          "email": "${finalData["email"]}",
+          "phone_number": "${finalData["phone_number"]}",
+          "street_address": "${finalData["street_address"]}",
+          "city": "stringee",
+          "province": "stringrr",
+          "district": "stringrrwd",
           "sector": "string",
           "cell": "string",
           "village": "string"
         }
-      });
+      };
 
-      print(response.data);
+      var url = "https://api.payingtone.com/api/v1/clients/register";
+
+      Dio dio = new Dio();
+      try {
+        var response = await dio.post(url, data: dataCollection);
+
+        final snackBar = SnackBar(
+          backgroundColor: Colors.green,
+          content: Text('${response.data['message']}'),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      } on DioError catch (e) {
+        if (e.response != null) {
+          final snackBar = SnackBar(
+            backgroundColor: Colors.red,
+            content: Text('${e.response!.data['message']}'),
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        } else {
+          print(e.requestOptions);
+          print(e.message);
+        }
+      }
     }
-    setState(() {
-      visible = false;
-    });
   }
 
   @override
@@ -189,34 +215,34 @@ class _SignUpFormThreeState extends State<SignUpFormThree> {
               child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "P",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 24),
-              ),
-              Text(
-                ")",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 24),
-              ),
-              Text(
-                ")",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 30),
-              ),
-              Text(
-                "PayingTone",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 18),
-              ),
+              // Text(
+              //   "P",
+              //   style: TextStyle(
+              //       color: Colors.white,
+              //       fontWeight: FontWeight.w900,
+              //       fontSize: 24),
+              // ),
+              // Text(
+              //   ")",
+              //   style: TextStyle(
+              //       color: Colors.white,
+              //       fontWeight: FontWeight.w900,
+              //       fontSize: 24),
+              // ),
+              // Text(
+              //   ")",
+              //   style: TextStyle(
+              //       color: Colors.white,
+              //       fontWeight: FontWeight.w900,
+              //       fontSize: 30),
+              // ),
+              // Text(
+              //   "PayingTone",
+              //   style: TextStyle(
+              //       color: Colors.white,
+              //       fontWeight: FontWeight.w900,
+              //       fontSize: 18),
+              // ),
             ],
           )),
         ));

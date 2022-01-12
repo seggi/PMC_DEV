@@ -105,7 +105,7 @@ Widget continueBtn(context, visible, fn) {
         width: 400,
         padding: EdgeInsets.only(top: 16, bottom: 16),
         decoration: BoxDecoration(
-            color: Colors.teal,
+            color: Colors.cyan,
             borderRadius: BorderRadius.circular(20.0),
             border: Border.all(color: Colors.white12)),
         child: Column(

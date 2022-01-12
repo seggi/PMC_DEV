@@ -1,3 +1,6 @@
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
+
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/signup_form/singup_page_form_three.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
@@ -16,6 +19,15 @@ class SignUpFormTwo extends StatefulWidget {
 class _SignUpFormTwoState extends State<SignUpFormTwo> {
   // For CircularProgressIndicator
   bool visible = false;
+  String? _selectedItem;
+  String? _dropdownError;
+
+  // static final String uploadEndPoint = '';
+  // late Future<File> _image;
+  // String status = '';
+  // late String base64Image;
+  // late File tmpFile;
+  // String errMessage = "Error uploading image";
 
   // Getting value from textField Widget
   String emailText = "";
@@ -23,6 +35,13 @@ class _SignUpFormTwoState extends State<SignUpFormTwo> {
   final uploadImageController = TextEditingController();
   final fullAddressController = TextEditingController();
   final selectGenderController = TextEditingController();
+
+  // getImagefromGallery() {
+  //   var image = ImagePicker.pickImage(source: ImageSource.gallery);
+  //   setState(() {
+  //     _image = image;
+  //   });
+  // }
 
   Future continueToNextScreen() async {
     final userDataPrScr = widget.userData;
@@ -34,11 +53,15 @@ class _SignUpFormTwoState extends State<SignUpFormTwo> {
     final form = _formKey.currentState;
     form!.save();
 
-    if (img != "" && fullAddress != "" && gender != "") {
+    if (img != "" && fullAddress != "") {
+      if (_selectedItem == null) {
+        setState(() => _dropdownError = "Please select an gender!");
+        // _isValid = false;
+      }
       var currentInputData = {
         'profile_picture': img,
-        'address': fullAddress,
-        'gender': gender
+        'gender': _selectedItem,
+        "street_address": fullAddress,
       };
 
       final newData = {...userDataPrScr, ...currentInputData};
@@ -99,13 +122,78 @@ class _SignUpFormTwoState extends State<SignUpFormTwo> {
                               SizedBox(
                                 height: 20,
                               ),
-                              formFieldRight(
-                                  selectGenderController,
-                                  (val) => val.isNotEmpty
-                                      ? null
-                                      : "Select your can not remain empty!",
-                                  "Select your gender",
-                                  Icons.female),
+                              Container(
+                                  child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(18),
+                                        // color: Colors.white24,
+                                        color: Colors.cyan,
+                                      ),
+                                      child: Row(children: [
+                                        Flexible(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(18),
+                                                color: Colors.black,
+                                              ),
+                                              child: Container(
+                                                height: 60,
+                                                padding: EdgeInsets.all(10.0),
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(18),
+                                                  color: Colors.white24,
+                                                ),
+                                                child:
+                                                    DropdownButtonHideUnderline(
+                                                  child: DropdownButton<String>(
+                                                    value: _selectedItem,
+                                                    isExpanded: true,
+                                                    hint: Text("Select roles",
+                                                        maxLines: 3),
+                                                    items: ["Female", "Male"]
+                                                        .map((String value) {
+                                                      return DropdownMenuItem<
+                                                          String>(
+                                                        value: value,
+                                                        child: new Text(
+                                                          value,
+                                                          textAlign:
+                                                              TextAlign.left,
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          maxLines: 1,
+                                                          softWrap: true,
+                                                        ),
+                                                      );
+                                                    }).toList(),
+                                                    onChanged: (value) {
+                                                      setState(() {
+                                                        _selectedItem = value!;
+                                                        _dropdownError = "";
+                                                      });
+                                                    },
+                                                  ),
+                                                ),
+                                              )),
+                                        ),
+                                        Container(
+                                          padding: EdgeInsets.all(10),
+                                          child: Icon(Icons.female_outlined,
+                                              color: Colors.white),
+                                        ),
+                                      ]))),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              // formFieldRight(
+                              //     selectGenderController,
+                              //     (val) => val.isNotEmpty
+                              //         ? null
+                              //         : "Select your can not remain empty!",
+                              //     "Select your gender",
+                              //     Icons.female),
                               SizedBox(
                                 height: 40,
                               ),

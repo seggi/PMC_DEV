@@ -33,21 +33,22 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
 
     if (email != "" && fullName != "" && phoneNumber != "") {
       var data = {
-        'email': email,
         'full_names': fullName,
+        'email': email,
         'phone_number': phoneNumber
       };
-      setState(() {
-        visible = true;
-      });
+
       Navigator.push(
           context,
           MaterialPageRoute(
               builder: (context) => SignUpFormTwo(userData: data)));
+    } else {
+      final snackBar = SnackBar(
+        backgroundColor: Colors.deepOrange,
+        content: Text('Make sure all input are not empty!'),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
-    setState(() {
-      visible = false;
-    });
   }
 
   @override
@@ -73,7 +74,7 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
                           padding: EdgeInsets.all(25),
                           child: Column(
                             children: [
-                              formFieldLeft(
+                              formFieldRight(
                                   fullNameController,
                                   (val) => val.isNotEmpty
                                       ? null
@@ -83,7 +84,7 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
                               SizedBox(
                                 height: 20,
                               ),
-                              formFieldRight(
+                              formFieldLeft(
                                   phoneNumberController,
                                   (val) => val.isNotEmpty
                                       ? null
@@ -93,13 +94,13 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
                               SizedBox(
                                 height: 20,
                               ),
-                              formFieldRight(
+                              formFieldLeft(
                                   emailController,
                                   (val) => val.isNotEmpty
                                       ? null
-                                      : "Full name must not remain empty!",
-                                  "Your email",
-                                  Icons.email),
+                                      : "Email must not remain empty!",
+                                  "Your Email",
+                                  Icons.person),
                               SizedBox(
                                 height: 40,
                               ),

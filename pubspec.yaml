@@ -33,7 +33,9 @@ dependencies:
   device_preview: any
   path: ^1.6.4
   http: any
-  dio: 4.0.0
+  dio: ^4.0.4
+  image_picker:
+  camera:
 
 dev_dependencies:
   flutter_test:
