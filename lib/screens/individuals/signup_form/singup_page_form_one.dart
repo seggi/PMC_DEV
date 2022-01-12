@@ -13,6 +13,43 @@ class SignUpFormOne extends StatefulWidget {
 }
 
 class _SignUpFormOneState extends State<SignUpFormOne> {
+  // For CircularProgressIndicator
+  bool visible = false;
+
+  // Getting value from textField Widget
+  String emailText = "";
+  final _formKey = GlobalKey<FormState>();
+  final emailController = TextEditingController();
+  final fullNameController = TextEditingController();
+  final phoneNumberController = TextEditingController();
+
+  Future continueToNextScreen() async {
+    String email = emailController.text;
+    String fullName = fullNameController.text;
+    String phoneNumber = phoneNumberController.text;
+
+    final form = _formKey.currentState;
+    form!.save();
+
+    if (email != "" && fullName != "" && phoneNumber != "") {
+      var data = {
+        'email': email,
+        'full_names': fullName,
+        'phone_number': phoneNumber
+      };
+      setState(() {
+        visible = true;
+      });
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => SignUpFormTwo(userData: data)));
+    }
+    setState(() {
+      visible = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -30,32 +67,46 @@ class _SignUpFormOneState extends State<SignUpFormOne> {
                   authBottomContents(
                       context,
                       "Sign Up",
-                      Container(
-                        padding: EdgeInsets.all(25),
-                        child: Column(
-                          children: [
-                            formFieldLeft("Enter full name", Icons.person),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight("Phone number", Icons.phone_android),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight("Your email", Icons.email),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            continueBtn(
-                              context,
-                              () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => SignUpFormTwo()));
-                              },
-                            )
-                          ],
+                      Form(
+                        key: _formKey,
+                        child: Container(
+                          padding: EdgeInsets.all(25),
+                          child: Column(
+                            children: [
+                              formFieldLeft(
+                                  fullNameController,
+                                  (val) => val.isNotEmpty
+                                      ? null
+                                      : "Full name must not remain empty!",
+                                  "Enter full name",
+                                  Icons.person),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              formFieldRight(
+                                  phoneNumberController,
+                                  (val) => val.isNotEmpty
+                                      ? null
+                                      : "Phone number must not remain empty!",
+                                  "Phone number",
+                                  Icons.phone_android),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              formFieldRight(
+                                  emailController,
+                                  (val) => val.isNotEmpty
+                                      ? null
+                                      : "Full name must not remain empty!",
+                                  "Your email",
+                                  Icons.email),
+                              SizedBox(
+                                height: 40,
+                              ),
+                              continueBtn(
+                                  context, visible, continueToNextScreen)
+                            ],
+                          ),
                         ),
                       ),
                       "",

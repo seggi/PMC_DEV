@@ -1,18 +1,72 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:pmc_dev/screens/individuals/signup_form/singup_page_form_four.dart';
+import 'package:pmc_dev/utils/api.dart';
 import 'package:pmc_dev/widgets/auth_bottom_content.dart';
 import 'package:pmc_dev/widgets/custom_btn.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 import 'package:pmc_dev/widgets/custom_wave.dart';
 
 class SignUpFormThree extends StatefulWidget {
-  SignUpFormThree({Key? key}) : super(key: key);
+  SignUpFormThree({Key? key, required this.userData}) : super(key: key);
+  final Map<String, dynamic> userData;
 
   @override
   _SignUpFormThreeState createState() => _SignUpFormThreeState();
 }
 
 class _SignUpFormThreeState extends State<SignUpFormThree> {
+  // For CircularProgressIndicator
+  bool visible = false;
+
+  // Getting value from textField Widget
+  String emailText = "";
+  final _formKey = GlobalKey<FormState>();
+  final pwdController = TextEditingController();
+  final reppeatPwdController = TextEditingController();
+
+  Future submitUSer() async {
+    final userDataPrScr = widget.userData;
+
+    String pwd = pwdController.text;
+    String reppeatPwd = reppeatPwdController.text;
+
+    final form = _formKey.currentState;
+    form!.save();
+
+    if (pwd == reppeatPwd && pwd != "" && reppeatPwd != "") {
+      var currentInputData = {'password': pwd};
+
+      // final finalData = {...currentInputData, ...userDataPrScr};
+      var url = "https://api.payingtone.com/api/v1/clients/register";
+
+      var response = await Dio().post(url, data: {
+        "full_names": "full_names should not be empty",
+        "password": "password must",
+        "profile_picture": "profile_picture should not be empty",
+        "account_type": "account_type should not be empty",
+        "gender": "gender should not be empty",
+        "address": {
+          "email": "ssss@gmail.com",
+          "phone_number": "098754434",
+          "street_address": "kifff",
+          "city": "ddss",
+          "province": "sdssd",
+          "district": "string",
+          "sector": "string",
+          "cell": "string",
+          "village": "string"
+        }
+      });
+
+      print(response.data);
+    }
+    setState(() {
+      visible = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -32,32 +86,47 @@ class _SignUpFormThreeState extends State<SignUpFormThree> {
                       "Sign Up",
                       Container(
                         padding: EdgeInsets.all(25),
-                        child: Column(
-                          children: [
-                            formFieldRight("Set password", Icons.vpn_key_sharp),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight(
-                                "Confirm password", Icons.vpn_key_sharp),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft("Enter OTP code", Icons.fingerprint),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            continueBtn(
-                              context,
-                              () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            SignUpFormFour()));
-                              },
-                            )
-                          ],
+                        child: Form(
+                          key: _formKey,
+                          child: Column(
+                            children: [
+                              formFieldRight(
+                                  pwdController,
+                                  (val) => val.isNotEmpty
+                                      ? null
+                                      : "Password can not remain empty!",
+                                  "Set password",
+                                  Icons.vpn_key_sharp),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              formFieldRight(
+                                  reppeatPwdController,
+                                  (val) => val.isNotEmpty
+                                      ? null
+                                      : "Confirm password can not remain empty!",
+                                  "Confirm password",
+                                  Icons.vpn_key_sharp),
+                              // SizedBox(
+                              //   height: 20,
+                              // ),
+                              // formFieldLeft("Enter OTP code", Icons.fingerprint),
+                              SizedBox(
+                                height: 40,
+                              ),
+                              // continueBtn(
+                              //   context,
+                              //   () {
+                              //     // Navigator.push(
+                              //     //     context,
+                              //     //     MaterialPageRoute(
+                              //     //         builder: (context) =>
+                              //     //             SignUpFormFour()));
+                              //   },
+                              // )
+                              continueBtn(context, visible, submitUSer)
+                            ],
+                          ),
                         ),
                       ),
                       "Account security details",

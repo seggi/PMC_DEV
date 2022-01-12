@@ -1,34 +1,39 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Widget emailFormField() {
+Widget emailFormField(inputController, valFn) {
   return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        color: Colors.white24,
-      ),
-      child: TextFormField(
-        keyboardType: TextInputType.text,
-        textInputAction: TextInputAction.next,
-        decoration: InputDecoration(
-            hintText: 'Enter email',
-            suffixIcon: Icon(Icons.email, color: Colors.white),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide.none,
-            )),
-      ));
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(18),
+      color: Colors.white24,
+    ),
+    child: TextFormField(
+      controller: inputController,
+      keyboardType: TextInputType.emailAddress,
+      textInputAction: TextInputAction.next,
+      decoration: InputDecoration(
+          hintText: 'Enter email',
+          suffixIcon: Icon(Icons.email, color: Colors.white),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ),
+          filled: true),
+      validator: valFn,
+    ),
+  );
 }
 
 // Sign up input fill
 
-Widget formFieldLeft(textHint, iconInput) {
+Widget formFieldLeft(inputController, valFn, textHint, iconInput) {
   return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18),
         color: Colors.white24,
       ),
       child: TextFormField(
+        controller: inputController,
         keyboardType: TextInputType.text,
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
@@ -37,17 +42,20 @@ Widget formFieldLeft(textHint, iconInput) {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide.none,
-            )),
+            ),
+            filled: true),
+        validator: valFn,
       ));
 }
 
-Widget formFieldRight(textHint, iconInput) {
+Widget formFieldRight(inputController, valFn, textHint, iconInput) {
   return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18),
         color: Colors.white24,
       ),
       child: TextFormField(
+        controller: inputController,
         keyboardType: TextInputType.text,
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
@@ -56,17 +64,20 @@ Widget formFieldRight(textHint, iconInput) {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide.none,
-            )),
+            ),
+            filled: true),
+        validator: valFn,
       ));
 }
 
-Widget signUpPhoneFormField() {
+Widget signUpPhoneFormField(inputController, valFn) {
   return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18),
         color: Colors.white24,
       ),
       child: TextFormField(
+        controller: inputController,
         keyboardType: TextInputType.text,
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
@@ -75,6 +86,8 @@ Widget signUpPhoneFormField() {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide.none,
-            )),
+            ),
+            filled: true),
+        validator: valFn,
       ));
 }

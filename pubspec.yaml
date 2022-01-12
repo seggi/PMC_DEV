@@ -31,6 +31,9 @@ dependencies:
   flutter_slidable: ^0.5.7
   curved_navigation_bar: ^1.0.1
   device_preview: any
+  path: ^1.6.4
+  http: any
+  dio: 4.0.0
 
 dev_dependencies:
   flutter_test:

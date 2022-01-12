@@ -34,35 +34,35 @@ class _SignUpFormFourState extends State<SignUpFormFour> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldRight(
-                                "Place of employment", Icons.account_balance),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight("Job title", Icons.work_rounded),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft(
-                                "Monthly income", Icons.attach_money_rounded),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft("Contract end date(dd/mm/yy)",
-                                Icons.calendar_today),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            continueBtn(
-                              context,
-                              () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            SignUpFormFive()));
-                              },
-                            )
+                            // formFieldRight(
+                            //     "Place of employment", Icons.account_balance),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldRight("Job title", Icons.work_rounded),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldLeft(
+                            //     "Monthly income", Icons.attach_money_rounded),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldLeft("Contract end date(dd/mm/yy)",
+                            //     Icons.calendar_today),
+                            // SizedBox(
+                            //   height: 40,
+                            // ),
+                            // continueBtn(
+                            //   context,
+                            //   () {
+                            //     Navigator.push(
+                            //         context,
+                            //         MaterialPageRoute(
+                            //             builder: (context) =>
+                            //                 SignUpFormFive()));
+                            //   },
+                            // )
                           ],
                         ),
                       ),

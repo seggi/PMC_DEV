@@ -98,7 +98,7 @@ Widget signInBtn(context, btnText, btnColor, btnTextColor) {
   );
 }
 
-Widget continueBtn(context, fn) {
+Widget continueBtn(context, visible, fn) {
   return TextButton(
       onPressed: fn,
       child: Container(
@@ -113,12 +113,20 @@ Widget continueBtn(context, fn) {
             SizedBox(
               height: 5,
             ),
-            Text("Continue",
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15,
-                  color: Colors.white,
-                ))
+            visible == false
+                ? Text("Continue",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15,
+                      color: Colors.white,
+                    ))
+                : Visibility(
+                    child: Container(
+                    child: CircularProgressIndicator(
+                      color: Colors.white,
+                      strokeWidth: 2.0,
+                    ),
+                  ))
           ],
         ),
       ));
