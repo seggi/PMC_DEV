@@ -34,44 +34,44 @@ class _SignUpFormFiveState extends State<SignUpFormFive> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldRight("Place of employment", Icons.person),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight(
-                                "Employee address", Icons.location_on),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft(
-                                "Employer tin number", Icons.menu_open_rounded),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft("Employee point of contact",
-                                Icons.control_point_duplicate),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight(
-                                "length of contract", Icons.file_copy),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight(
-                                "Years of service", Icons.calendar_today),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            continueBtn(
-                              context,
-                              () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => SignUpFormSix()));
-                              },
-                            )
+                            // formFieldRight("Place of employment", Icons.person),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldRight(
+                            //     "Employee address", Icons.location_on),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldLeft(
+                            //     "Employer tin number", Icons.menu_open_rounded),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldLeft("Employee point of contact",
+                            //     Icons.control_point_duplicate),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldRight(
+                            //     "length of contract", Icons.file_copy),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldRight(
+                            //     "Years of service", Icons.calendar_today),
+                            // SizedBox(
+                            //   height: 40,
+                            // ),
+                            // continueBtn(
+                            //   context,
+                            //   () {
+                            //     Navigator.push(
+                            //         context,
+                            //         MaterialPageRoute(
+                            //             builder: (context) => SignUpFormSix()));
+                            //   },
+                            // )
                           ],
                         ),
                       ),

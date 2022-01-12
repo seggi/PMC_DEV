@@ -34,33 +34,33 @@ class _SignUpFormSixState extends State<SignUpFormSix> {
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [
-                            formFieldRight("Bank Name", Icons.account_balance),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldRight(
-                                "Account Type", Icons.shopping_bag_outlined),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft("Account Number", Icons.bar_chart),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            formFieldLeft(
-                                "Currency", Icons.attach_money_rounded),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            continueBtn(
-                              context,
-                              () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => LoginPage()));
-                              },
-                            )
+                            // formFieldRight("Bank Name", Icons.account_balance),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldRight(
+                            //     "Account Type", Icons.shopping_bag_outlined),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldLeft("Account Number", Icons.bar_chart),
+                            // SizedBox(
+                            //   height: 20,
+                            // ),
+                            // formFieldLeft(
+                            //     "Currency", Icons.attach_money_rounded),
+                            // SizedBox(
+                            //   height: 40,
+                            // ),
+                            // continueBtn(
+                            //   context,
+                            //   () {
+                            //     Navigator.push(
+                            //         context,
+                            //         MaterialPageRoute(
+                            //             builder: (context) => LoginPage()));
+                            //   },
+                            // )
                           ],
                         ),
                       ),
