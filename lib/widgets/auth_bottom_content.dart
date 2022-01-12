@@ -201,7 +201,7 @@ Widget mainInputFormContent(context) {
             // SizedBox(
             //   height: 40,
             // ),
-            // signInBtn(context, "Sign In", Colors.teal, Colors.white)
+            signInBtn(context, "Sign In", Colors.teal, Colors.white)
           ],
         ),
       ),

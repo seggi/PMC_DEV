@@ -43,7 +43,7 @@ class _CartPageState extends State<CartPage> {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 40,
+                            height: 30,
                           ),
                           itemList(),
                           SizedBox(
@@ -133,7 +133,7 @@ class _CartPageState extends State<CartPage> {
                           onPressed: () => Navigator.of(context).pop(),
                           icon: Icon(
                             Icons.more_vert,
-                            size: 28,
+                            size: 20,
                             color: Colors.white,
                           ),
                         )),
