@@ -1,6 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-
 import 'package:pmc_dev/screens/individuals/charting/chart_page.dart';
 import 'package:pmc_dev/screens/individuals/contacts/contact_page.dart';
 import 'package:pmc_dev/screens/individuals/dashboard/dashboard_page.dart';

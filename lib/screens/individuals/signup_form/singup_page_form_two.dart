@@ -188,13 +188,13 @@ class _SignUpFormTwoState extends State<SignUpFormTwo> {
                               SizedBox(
                                 height: 20,
                               ),
-                              // formFieldRight(
-                              //     selectGenderController,
-                              //     (val) => val.isNotEmpty
-                              //         ? null
-                              //         : "Select your can not remain empty!",
-                              //     "Select your gender",
-                              //     Icons.female),
+                              formFieldRight(
+                                  selectGenderController,
+                                  (val) => val.isNotEmpty
+                                      ? null
+                                      : "Select your can not remain empty!",
+                                  "Select your gender",
+                                  Icons.female),
                               SizedBox(
                                 height: 40,
                               ),
