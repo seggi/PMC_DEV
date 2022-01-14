@@ -48,10 +48,8 @@ Widget gridItemBox(context) {
             child: optionBtn(
                 context, "Insurance claim", Icons.accessible_forward_outlined,
                 () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InsuaranceClaimPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ClaimPage()));
             }),
           ),
           SizedBox(

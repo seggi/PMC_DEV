@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
-import '../bottom_widget.dart';
-
 Widget bottomWidget(context) {
   return Container(
     child: Column(
@@ -12,7 +10,7 @@ Widget bottomWidget(context) {
           padding: EdgeInsets.all(20),
           margin: EdgeInsets.only(top: 20),
           child: Text(
-            "Hello Jean Paul",
+            "Please Fill Here Your Claim Details!l",
             style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
           ),
         ),
@@ -22,17 +20,30 @@ Widget bottomWidget(context) {
         Container(
           alignment: Alignment.center,
           padding: EdgeInsets.all(20),
-          child: Text(
-            "Find black old man stock images in HD and millions of other royalty-free stock photos, illustrations and vectors in the Shutterstock collection",
-            style: TextStyle(
-                color: pmcWhite54, fontWeight: FontWeight.w600, fontSize: 11),
-          ),
+          // child: Text(
+          //   "Please fill here your claim details!",
+          //   style: TextStyle(
+          //       color: pmcWhite54, fontWeight: FontWeight.w600, fontSize: 11),
+          // ),
         ),
-        gridItemBox(context),
+        // gridItemBox(context),
         SizedBox(
           height: 30,
         ),
+        // TextField(
+        //   decoration: InputDecoration(
+        //       hintText: "Your name",
+        //       fillColor: pmcBlack87,
+        //       labelText: "Name",
+        //       labelStyle: TextStyle(
+        //         fontSize: 25,
+        //         color: Colors.green,
+
+        // ),
         numberBox(),
+        SizedBox(
+          height: 30,
+        ),
         bottomItem(context)
       ],
     ),
@@ -41,6 +52,7 @@ Widget bottomWidget(context) {
 
 Widget numberBox() {
   return Container(
+    margin: EdgeInsets.only(bottom: 300),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -55,43 +67,23 @@ Widget numberBox() {
               // bottomLeft: Radius.circular(12),
             ),
           ),
-          child: Text(
-            "1",
-            style: TextStyle(
-                fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
-          ),
+          //   child: Text(
+          //     "1",
+          //     style: TextStyle(
+          //         fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
+          //   ),
+          // ),
+          // SizedBox(
+          //   width: 5,
+          // ),
+          // Text(
+          //   "2",
+          //   style: TextStyle(
+          //       fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
+          // ),
         ),
         SizedBox(
           width: 5,
-        ),
-        Text(
-          "2",
-          style: TextStyle(
-              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
-        ),
-        SizedBox(
-          width: 5,
-        ),
-        Text(
-          "3",
-          style: TextStyle(
-              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
-        ),
-        SizedBox(
-          width: 5,
-        ),
-        Text(
-          "4",
-          style: TextStyle(
-              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
-        ),
-        SizedBox(
-          width: 5,
-        ),
-        Text(
-          "5",
-          style: TextStyle(
-              fontSize: 18, color: pmcWhite70, fontWeight: FontWeight.w600),
         ),
       ],
     ),
