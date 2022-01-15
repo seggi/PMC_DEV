@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/claim/insuarance%20claim/insuarance_claim_page.dart';
+// import 'package:pmc_dev/screens/individuals/claim/insuarance%20claim/insuarance_claim_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
 Widget bottomWidget(context) {
@@ -45,14 +45,8 @@ Widget gridItemBox(context) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
-            child: optionBtn(
-                context, "Insurance claim", Icons.accessible_forward_outlined,
-                () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InsuaranceClaimPage()));
-            }),
+            child: optionBtn(context, "Insurance claim",
+                Icons.accessible_forward_outlined, () {}),
           ),
           SizedBox(
             width: 10,

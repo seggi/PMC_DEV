@@ -35,7 +35,6 @@ dependencies:
   http: any
   dio: ^4.0.4
   image_picker:
-  camera:
 
 dev_dependencies:
   flutter_test:
