@@ -194,14 +194,14 @@ Widget mainInputFormContent(context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // emailFormField(),
-            // SizedBox(
-            //   height: 20,
-            // ),
-            // PwdInputField(),
-            // SizedBox(
-            //   height: 40,
-            // ),
-            // signInBtn(context, "Sign In", Colors.teal, Colors.white)
+            SizedBox(
+              height: 20,
+            ),
+            PwdInputField(),
+            SizedBox(
+              height: 40,
+            ),
+            signInBtn(context, "Sign In", Colors.teal, Colors.white)
           ],
         ),
       ),

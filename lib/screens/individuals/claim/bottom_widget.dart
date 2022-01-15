@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/claim/insuarance%20claim/insuarance_claim_page.dart';
+import 'package:pmc_dev/screens/individuals/claim/products/product_claim_page.dart';
+import 'package:pmc_dev/screens/individuals/claim/service/service_claim_page.dart';
+// import 'package:pmc_dev/screens/individuals/claim/insuarance%20claim/insuarance_claim_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
 Widget bottomWidget(context) {
@@ -45,14 +47,8 @@ Widget gridItemBox(context) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
-            child: optionBtn(
-                context, "Insurance claim", Icons.accessible_forward_outlined,
-                () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InsuaranceClaimPage()));
-            }),
+            child: optionBtn(context, "Insurance claim",
+                Icons.accessible_forward_outlined, () {}),
           ),
           SizedBox(
             width: 10,
@@ -69,15 +65,21 @@ Widget gridItemBox(context) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
-            child: optionBtn(
-                context, "Service claim", Icons.bookmarks_outlined, () {}),
+            child: optionBtn(context, "Service claim", Icons.bookmarks_outlined,
+                () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ServiceClaimPage()));
+            }),
           ),
           SizedBox(
             width: 10,
           ),
           Flexible(
               child: optionBtn(
-                  context, "Product claim", Icons.card_giftcard_sharp, () {})),
+                  context, "Product claim", Icons.card_giftcard_sharp, () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProductClaimPage()));
+          })),
         ],
       ),
     ],
