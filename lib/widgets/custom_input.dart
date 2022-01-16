@@ -155,3 +155,38 @@ Widget signUpPhoneFormField(inputController, valFn) {
             ),
           ])));
 }
+
+Widget formField(textHint) {
+  return Container(
+    child: TextFormField(
+      autocorrect: true,
+      keyboardType: TextInputType.text,
+      textInputAction: TextInputAction.next,
+      decoration: InputDecoration(
+          hintText: textHint,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ),
+          filled: true),
+    ),
+  );
+}
+
+Widget formFieldMultLine(textHint) {
+  return Container(
+    child: TextFormField(
+      maxLines: 8,
+      autocorrect: true,
+      keyboardType: TextInputType.text,
+      textInputAction: TextInputAction.next,
+      decoration: InputDecoration(
+          hintText: textHint,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ),
+          filled: true),
+    ),
+  );
+}

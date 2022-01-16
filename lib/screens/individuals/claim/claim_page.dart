@@ -27,7 +27,6 @@ class _ClaimPageState extends State<ClaimPage> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      // productListBg(context),
                       bottomWidget(context),
                       SizedBox(
                         height: 60,
