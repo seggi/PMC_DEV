@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/products/bottom_widget.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/phone/phone_bottom_widget.dart';
 
 import 'widgets/custom_positioned.dart';
 import 'widgets/notification_number.dart';
@@ -30,7 +31,7 @@ class _ProductsPageState extends State<ProductsPage> {
                       bottomWidget(context),
                       SizedBox(
                         height: 60,
-                      )
+                      ),
                     ],
                   ),
                 ),
