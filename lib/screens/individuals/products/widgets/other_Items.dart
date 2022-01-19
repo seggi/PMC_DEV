@@ -235,8 +235,12 @@ Widget categoryItem(context) {
             ),
           ],
         ),
+        // here is third row
         // third row
-        SizedBox(height: 10),
+
+        // SizedBox(
+        //   height: 8,
+        // ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

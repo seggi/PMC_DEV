@@ -71,7 +71,7 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                   ),
                   Container(
                     child: Text(
-                      "If you're looking for one of the best iPhones on the market,",
+                      "Following the launch of Apple's iPhone 13 lineup of phones, both the iPhone 12 Pro and the iPhone 12 Pro Max disappeared from Apple's store. Both the iPhone 12 Pro and iPhone 12 Pro are now discontinued, at least if you want to get one via Apple.",
                       style: TextStyle(
                           color: Colors.white54,
                           fontSize: 15,
@@ -109,30 +109,78 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                               "1",
                             ),
                             SizedBox(
-                              width: 20,
+                              width: 5,
                             ),
                             rectagleBox(Colors.white24, "2"),
                             SizedBox(
-                              width: 20,
+                              width: 5,
                             ),
                             rectagleBox(Colors.white24, "3"),
                             SizedBox(
-                              width: 20,
+                              width: 5,
                             ),
                             rotateBox(Colors.white24, "...")
                           ],
                         ),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Flexible(
-                          child: Text("",
-                              style: TextStyle(
-                                  color: Colors.teal,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w800)),
-                        )
+                          child: Container(
+                            width: 60.0,
+                            height: 40.0,
+                            padding: EdgeInsets.all(1),
+                            decoration: BoxDecoration(
+                                color: Colors.white24,
+                                shape: BoxShape.rectangle,
+                                borderRadius: BorderRadius.circular(6),
+                                border: Border.all(color: Colors.white24)),
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 1,
+                                  ),
+                                  Text("256",
+                                      style: TextStyle(
+                                          color: Colors.white54,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w300)),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 60.0,
+                          height: 40.0,
+                          padding: EdgeInsets.all(1),
+                          decoration: BoxDecoration(
+                              color: Colors.white24,
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(color: Colors.white24)),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 1,
+                                ),
+                                Text("512",
+                                    style: TextStyle(
+                                        color: Colors.white54,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w300)),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 20),
                   Row(
                     children: [
                       Flexible(
