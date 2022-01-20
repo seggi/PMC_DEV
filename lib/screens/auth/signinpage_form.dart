@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pmc_dev/widgets/pwd_input.dart';
 import 'package:pmc_dev/widgets/signin_btn.dart';
 import 'package:pmc_dev/widgets/title.dart';
-import 'package:pmc_dev/widgets/custom_input.dart';
 
 class SignInPageForm extends StatefulWidget {
   SignInPageForm({Key? key}) : super(key: key);
