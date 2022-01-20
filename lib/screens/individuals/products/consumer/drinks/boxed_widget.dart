@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/payment/payment_page.dart';
+import 'package:pmc_dev/screens/individuals/products/product_details.dart';
 
-import '../../../product_details.dart';
-
-Widget phonebottomWidget(context, pgImg, serviceController) {
+Widget boxedbottomWidget(context, pgImg, serviceController) {
   return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
@@ -24,13 +23,13 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   otherProductImageButton(context,
-                      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHL83_AV3?wid=2000&hei=2000&fmt=jpeg&qlt=80&.v=1601149109000"),
+                      "https://www.inyangeindustries.com/img/products/Inyange-Juice-image-icon-2.png"),
                   otherProductImageButton(context,
-                      "https://fdn.gsmarena.com/imgroot/news/20/10/iphone-12-roundup/-1200/gsmarena_001.jpg"),
+                      "https://www.inyangeindustries.com/img/products/Banners-01.jpg"),
                   otherProductImageButton(context,
-                      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MKTY3_AV2?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1622141743000"),
+                      "https://www.inyangeindustries.com/img/products/Inyange-Milk-image-icon-1.png"),
                   otherProductImageButton(context,
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA7KH11wWhFPpxpBaxLWh0h23USyCJm7Pkww&usqp=CAU"),
+                      "https://www.inyangeindustries.com/img/products/Inyange-Water-image-icon-1.png"),
                 ],
               ),
             ),
@@ -52,14 +51,14 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Iphone 12",
+                        "Inyange Juice",
                         style: TextStyle(
                             color: Colors.white70,
                             fontSize: 18,
                             fontWeight: FontWeight.w800),
                       ),
                       Text(
-                        "Rwf 1,200,000",
+                        "Rwf 2000",
                         style: TextStyle(
                             color: Colors.teal,
                             fontSize: 18,
@@ -72,7 +71,7 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                   ),
                   Container(
                     child: Text(
-                      "Following the launch of Apple's iPhone 13 lineup of phones, both the iPhone 12 Pro and the iPhone 12 Pro Max disappeared from Apple's store. Both the iPhone 12 Pro and iPhone 12 Pro are now discontinued, at least if you want to get one via Apple.",
+                      "Inyange industries is engaged in the business of producing & selling a wide variety of fruit products, including fruit juice concentrates, fruit juice drinks & dairy related products. Our products are primarily sold to the local market, as well as regionally via Inyange certified distributors.",
                       style: TextStyle(
                           color: Colors.white54,
                           fontSize: 15,
@@ -90,7 +89,7 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                                 color: Colors.white54,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600)),
-                        Text("Storage",
+                        Text("Box Type",
                             style: TextStyle(
                                 color: Colors.white54,
                                 fontSize: 18,
@@ -128,8 +127,7 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                         ),
                         Flexible(
                           child: Container(
-                            width: 60.0,
-                            height: 40.0,
+                            width: 120.0,
                             padding: EdgeInsets.all(1),
                             decoration: BoxDecoration(
                                 color: Colors.white24,
@@ -143,38 +141,13 @@ Widget phonebottomWidget(context, pgImg, serviceController) {
                                   SizedBox(
                                     width: 1,
                                   ),
-                                  Text("256",
+                                  Text("Small",
                                       style: TextStyle(
                                           color: Colors.white54,
                                           fontSize: 15,
                                           fontWeight: FontWeight.w300)),
                                 ],
                               ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 60.0,
-                          height: 40.0,
-                          padding: EdgeInsets.all(1),
-                          decoration: BoxDecoration(
-                              color: Colors.white24,
-                              shape: BoxShape.rectangle,
-                              borderRadius: BorderRadius.circular(6),
-                              border: Border.all(color: Colors.white24)),
-                          child: TextButton(
-                            onPressed: () {},
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                  width: 1,
-                                ),
-                                Text("512",
-                                    style: TextStyle(
-                                        color: Colors.white54,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w300)),
-                              ],
                             ),
                           ),
                         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/phone/phone_goods_page.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/drinks/boxed_drinks_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_details.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_widget.dart';
@@ -275,7 +276,7 @@ Widget categoryItem(context) {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => LiquorPage(
+                          builder: (context) => BoxedDrinksPage(
                                 pgImg:
                                     'https://store2door.rw/wp-content/uploads/2020/04/1L_TETRAPAK_Mango.jpg',
                               )));
