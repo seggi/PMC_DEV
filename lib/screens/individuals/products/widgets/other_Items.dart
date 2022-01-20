@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/computer/phone/phone_goods_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
-import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/phone/phone_goods_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/drinks/boxed_drinks_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/electricity/electricity_page.dart';

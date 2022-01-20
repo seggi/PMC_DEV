@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/phone/phone_bottom_widget.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/computer/phone/phone_bottom_widget.dart';
 
 // import '../../product_widget.dart';
 import '../custom_positioned.dart';
