@@ -19,7 +19,7 @@ Widget bottomItemBox(context, pgImg, serviceController) {
           children: [
             Padding(
                 padding: const EdgeInsets.all(18.0),
-                child: Text("Car Service",
+                child: Text("Water",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -35,6 +35,7 @@ Widget bottomItemBox(context, pgImg, serviceController) {
                   topLeft: Radius.circular(20),
                 ),
               ),
+              // MIddle Text And Widgets
               child: Column(
                 children: [
                   Wrap(
@@ -42,26 +43,31 @@ Widget bottomItemBox(context, pgImg, serviceController) {
                     spacing: 10.0,
                     runSpacing: 10.0,
                     children: [
-                      customButton(context, "Diesel", Colors.cyan),
-                      customButton(context, "Petroleum", Colors.white24),
-                      customButton(
-                          context, "Air filter change", Colors.white24),
-                      customButton(context, "Wheels change", Colors.white24),
-                      customButton(context, "Battery", Colors.white24),
-                      customButton(context, "Radiator", Colors.white24),
-                      customButton(context, "Engine", Colors.white24),
-                      customButton(context, "Car Brakes", Colors.white24),
-                      customButton(context, "Radiator", Colors.white24),
+                      Container(
+                        child: Text(
+                            "Pay all electricity & water bills here by filling below the required information to perform a transaction.",
+                            style: TextStyle(
+                                color: Colors.white30,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w300)),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      formField("Amount to pay on water bill (Rwf) "),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      formField("Owner’s Name"),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      formField("Meter Number "),
                     ],
                   ),
                   SizedBox(height: 30),
                   Column(
                     children: [
-                      formFieldRightTest("Enter custom service",
-                          Icons.cleaning_services_rounded),
-                      SizedBox(height: 30),
-                      formFieldLeftTest(
-                          "Amount to be paid", Icons.attach_money),
                       SizedBox(height: 30),
                       Row(
                         children: [

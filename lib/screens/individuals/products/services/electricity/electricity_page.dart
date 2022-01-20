@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-
-// import '../../product_widget.dart';
+import '../custom_positioned.dart';
 import 'bottom_items.dart';
-import 'custom_positioned.dart';
 
-class ConveniencePage extends StatefulWidget {
-  ConveniencePage({Key? key, required this.pgImg}) : super(key: key);
+class ElectricityServicePage extends StatefulWidget {
+  ElectricityServicePage({Key? key, required this.pgImg}) : super(key: key);
   final pgImg;
   @override
-  _ConveniencePageState createState() => _ConveniencePageState();
+  _ElectricityServicePageState createState() => _ElectricityServicePageState();
 }
 
-class _ConveniencePageState extends State<ConveniencePage> {
+class _ElectricityServicePageState extends State<ElectricityServicePage> {
+  final _formKey = GlobalKey<FormState>();
+  final serviceController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final pgImg = widget.pgImg;
@@ -30,7 +30,7 @@ class _ConveniencePageState extends State<ConveniencePage> {
                 children: [
                   productImageButton(pgImg),
                   Container(
-                    child: bottomItemBox(context, pgImg),
+                    child: bottomItemBox(context, pgImg, serviceController),
                   ),
                   Container(
                     height: 60,

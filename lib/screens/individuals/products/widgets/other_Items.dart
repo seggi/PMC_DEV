@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/electricity/electricity_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/water/water_page.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_details.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_widget.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
@@ -214,7 +216,7 @@ Widget categoryItem(context) {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => LiquorPage(
+                          builder: (context) => WaterServicePage(
                                 pgImg:
                                     'https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg',
                               )));
@@ -228,6 +230,62 @@ Widget categoryItem(context) {
                     image: DecorationImage(
                         image: NetworkImage(
                             "https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ElectricityServicePage(
+                                pgImg:
+                                    'https://www.thoughtco.com/thmb/NjWNoDg8rEZ4KVQMUq3xwp3G6tU=/735x0/lightbulblit-57a5bf6b5f9b58974aee831e.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://www.thoughtco.com/thmb/NjWNoDg8rEZ4KVQMUq3xwp3G6tU=/735x0/lightbulblit-57a5bf6b5f9b58974aee831e.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => WaterServicePage(
+                                pgImg:
+                                    'https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg"),
                         fit: BoxFit.fill),
                   ),
                 ),
