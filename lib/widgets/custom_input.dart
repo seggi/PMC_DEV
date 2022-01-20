@@ -190,3 +190,87 @@ Widget formFieldMultLine(textHint) {
     ),
   );
 }
+
+Widget formFieldRightTest(textHint, iconInput) {
+  return Container(
+      child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18),
+            // color: Colors.white24,
+            color: Colors.cyan,
+          ),
+          child: Row(children: [
+            Flexible(
+              child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    color: Colors.black,
+                  ),
+                  child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        color: Colors.white24,
+                      ),
+                      child: TextFormField(
+                        keyboardType: TextInputType.text,
+                        textInputAction: TextInputAction.next,
+                        decoration: InputDecoration(
+                            hintText: textHint,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide.none,
+                            ),
+                            filled: true),
+                      ))),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Icon(iconInput),
+            ),
+          ])));
+}
+
+Widget formFieldLeftTest(textHint, iconInput) {
+  return Container(
+    child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18),
+          // color: Colors.white24,
+          color: Colors.cyan,
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Icon(iconInput),
+            ),
+            Flexible(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18),
+                  color: Colors.black,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    color: Colors.white24,
+                  ),
+                  child: TextFormField(
+                    autocorrect: true,
+                    keyboardType: TextInputType.text,
+                    textInputAction: TextInputAction.next,
+                    decoration: InputDecoration(
+                        hintText: textHint,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide.none,
+                        ),
+                        filled: true),
+                  ),
+                ),
+              ),
+            )
+          ],
+        )),
+  );
+}

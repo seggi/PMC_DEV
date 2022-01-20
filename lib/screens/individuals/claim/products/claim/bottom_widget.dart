@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:pmc_dev/screens/individuals/claim/products/claim/product_claim1_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
-import 'package:pmc_dev/widgets/custom_input.dart';
 
 import 'middle_item.dart';
 

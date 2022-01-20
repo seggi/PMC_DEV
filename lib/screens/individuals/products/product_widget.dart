@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/product_details.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
 Widget productDisplay(context) {
