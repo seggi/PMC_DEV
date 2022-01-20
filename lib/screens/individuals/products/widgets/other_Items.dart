@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_details.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_widget.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
@@ -176,71 +177,63 @@ Widget categoryItem(context) {
             ),
           ],
         ),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //   children: [
-        //     Flexible(
-        //       child: Container(
-        //         child: productImageButton(
-        //             context,
-        //             'https://image.made-in-china.com/202f0j00EMGRPDpgsbqJ/Wholesale-Used-Mobile-Phone-Cellphone-for-iPhone-11-11PRO-Max-64GB-32GB-128GB-256GB-New-Unlocked-Original.jpg',
-        //             () {}),
-        //       ),
-        //     ),
-        //     Flexible(
-        //       child: Container(
-        //         // width: 180,
-        //         height: 200,
-        //         child: productImageButton(
-        //             context,
-        //             'https://kphv.cz/wp-content/uploads/1246280_16061017110043391702.jpg',
-        //             () {}),
-        //       ),
-        //     ),
-        //   ],
-        // ),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //   children: [
-        //     Flexible(
-        //       child: Container(
-        //         width: 180,
-        //         height: 200,
-        //         child: productImageButton(
-        //             context,
-        //             'https://www.afrikmag.com/wp-content/uploads/2020/05/canalplus.jpg',
-        //             () {}),
-        //       ),
-        //     ),
-        //     Flexible(
-        //       child: Container(
-        //         width: 180,
-        //         height: 150,
-        //         child: productImageButton(
-        //             context,
-        //             'https://i.dawn.com/primary/2018/10/5bcbe259cef7c.jpg',
-        //             () {}),
-        //       ),
-        //     ),
-        //   ],
-        // )
+
+        // Second Row
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CarServicePage(
+                                pgImg:
+                                    'https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LiquorPage(
+                                pgImg:
+                                    'https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ]));
 }
-
-// Widget productImageButton1(context, imageUrls) {
-//   return TextButton(
-//     onPressed: () {
-//       Navigator.push(
-//           context, MaterialPageRoute(builder: (context) => ConveniencePage()));
-//     },
-//     child: Container(
-//       width: MediaQuery.of(context).size.width,
-//       height: MediaQuery.of(context).size.height / 2,
-//       decoration: BoxDecoration(
-//         shape: BoxShape.rectangle,
-//         image:
-//             DecorationImage(image: NetworkImage(imageUrls), fit: BoxFit.fill),
-//       ),
-//     ),
-//   );
-// }
