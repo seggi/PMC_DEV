@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/phone/phone_goods_page.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/drinks/boxed_drinks_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_details.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_widget.dart';
@@ -228,6 +229,62 @@ Widget categoryItem(context) {
                     image: DecorationImage(
                         image: NetworkImage(
                             "https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        // here is third row
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PhoneGoodsPage(
+                                pgImg:
+                                    'https://www.apple.com/newsroom/images/product/availability/Apple_iphone12mini-iphone12max-homepodmini-availability_iphone12promax-us_110520_inline.jpg.large.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://www.apple.com/newsroom/images/product/availability/Apple_iphone12mini-iphone12max-homepodmini-availability_iphone12promax-us_110520_inline.jpg.large.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BoxedDrinksPage(
+                                pgImg:
+                                    'https://store2door.rw/wp-content/uploads/2020/04/1L_TETRAPAK_Mango.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://store2door.rw/wp-content/uploads/2020/04/1L_TETRAPAK_Mango.jpg"),
                         fit: BoxFit.fill),
                   ),
                 ),
