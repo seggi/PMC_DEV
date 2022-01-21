@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import '../custom_positioned.dart';
 import 'bottom_items.dart';
 
-class CarServicePage extends StatefulWidget {
-  CarServicePage({Key? key, required this.pgImg}) : super(key: key);
+class ElectricityServicePage extends StatefulWidget {
+  ElectricityServicePage({Key? key, required this.pgImg}) : super(key: key);
   final pgImg;
   @override
-  _CarServicePageState createState() => _CarServicePageState();
+  _ElectricityServicePageState createState() => _ElectricityServicePageState();
 }
 
-class _CarServicePageState extends State<CarServicePage> {
+class _ElectricityServicePageState extends State<ElectricityServicePage> {
   final _formKey = GlobalKey<FormState>();
   final serviceController = TextEditingController();
   @override
