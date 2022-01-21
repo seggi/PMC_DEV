@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'bottom_items.dart';
 import 'bottom_liquor.dart';
 import 'custom_positioned.dart';
 
