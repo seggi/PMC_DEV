@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-// import '../../product_widget.dart';
 import '../custom_positioned.dart';
 import 'bottom_items.dart';
 
