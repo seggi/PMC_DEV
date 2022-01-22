@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/payment/bank_confirmation_page.dart';
 import 'package:pmc_dev/screens/individuals/payment/widgets/bottom_item_approve_order.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
+import 'package:pmc_dev/widgets/popup/opt_code_dialog.dart';
 import 'widgets/custom_positioned.dart';
 
 class ApproveOrderPage extends StatefulWidget {
@@ -63,11 +63,16 @@ class _ApproveOrderPageState extends State<ApproveOrderPage> {
                           border: Border.all(color: Colors.teal)),
                       child: TextButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      BankConfirmationPage()));
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) =>
+                          //             BankConfirmationPage()));
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) => optCodeDialog()
+                              // cartDialog()
+                              );
                         },
                         child: Row(
                           children: [
