@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:pmc_dev/screens/individuals/cart/artical_details.dart';
 import 'package:pmc_dev/screens/individuals/cart/subtotal.dart';
+import 'package:pmc_dev/screens/individuals/payment/bank_confirmation_page.dart';
+import 'package:pmc_dev/widgets/popup/cart_dialog.dart';
+import 'package:pmc_dev/widgets/popup/opt_code_dialog.dart';
 
 class CartPage extends StatefulWidget {
   CartPage({Key? key}) : super(key: key);
@@ -150,7 +153,13 @@ class _CartPageState extends State<CartPage> {
                   ),
                   child: Center(
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) => cartDialog(),
+                          //
+                        );
+                      },
                       child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.only(
