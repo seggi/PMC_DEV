@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/payment/widgets/bottom_item_approve_order.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
+import 'package:pmc_dev/widgets/popup/cart_dialog.dart';
 import 'package:pmc_dev/widgets/popup/opt_code_dialog.dart';
 import 'widgets/custom_positioned.dart';
 
@@ -70,8 +71,8 @@ class _ApproveOrderPageState extends State<ApproveOrderPage> {
                           //             BankConfirmationPage()));
                           showDialog(
                             context: context,
-                            builder: (BuildContext context) => optCodeDialog(),
-                            // cartDialog()
+                            builder: (BuildContext context) =>cartDialog() ,
+                            // optCodeDialog()
                           );
                         },
                         child: Row(
