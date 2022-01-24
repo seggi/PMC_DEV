@@ -74,7 +74,7 @@ class _ApproveOrderPageState extends State<ApproveOrderPage> {
                           showDialog(
                             context: context,
                             builder: (BuildContext context) =>
-                                ServicePaymentDialog(),
+                                BuyOptionDialog(),
                             // optCodeDialog()
                             // ServicePaymentDialog()
                             // cartDialog()
