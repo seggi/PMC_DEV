@@ -19,7 +19,7 @@ Widget ServicePaymentDialog() {
             children: [
               Container(
                 alignment: Alignment.bottomLeft,
-                padding: const EdgeInsets.all(14.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Center(
                   child: Text(
                     'How often do you wish to Pay This Service? ',
@@ -41,12 +41,21 @@ Widget ServicePaymentDialog() {
                       onPressed: () {},
                       child: Row(
                         children: [
-                          Icon(Icons.shopping_cart_outlined,
-                              color: Colors.white54),
                           Text(
-                            "once",
+                            "Once",
                             style: TextStyle(color: Colors.white, fontSize: 12),
-                          )
+                          ),
+                          // SizedBox(
+                          //   width: 10,
+                          // ),
+                          Wrap(
+                            direction: Axis.vertical,
+                            children: [
+                              Icon(Icons.arrow_drop_up, color: Colors.white54),
+                              // SizedBox(height: 0),
+                              Icon(Icons.arrow_drop_down, color: Colors.white54)
+                            ],
+                          ),
                         ],
                       ),
                     ),
@@ -59,12 +68,18 @@ Widget ServicePaymentDialog() {
                       onPressed: () {},
                       child: Row(
                         children: [
-                          Icon(Icons.shopping_cart_outlined,
-                              color: Colors.white54),
                           Text(
                             "Monthly",
                             style: TextStyle(color: Colors.white, fontSize: 12),
-                          )
+                          ),
+                          Wrap(
+                            direction: Axis.vertical,
+                            children: [
+                              Icon(Icons.arrow_drop_up, color: Colors.white54),
+                              SizedBox(height: 0),
+                              Icon(Icons.arrow_drop_down, color: Colors.white54)
+                            ],
+                          ),
                         ],
                       ),
                     ),
@@ -73,7 +88,7 @@ Widget ServicePaymentDialog() {
               ),
               Container(
                 padding: const EdgeInsets.all(8.0),
-                margin: EdgeInsets.only(top: 20.0),
+                margin: EdgeInsets.only(top: 10.0),
                 decoration: BoxDecoration(
                     color: Colors.white12,
                     borderRadius: BorderRadius.circular(12.0)),
