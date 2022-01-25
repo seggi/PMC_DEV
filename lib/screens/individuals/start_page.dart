@@ -24,7 +24,7 @@ class _StartPageState extends State<StartPage> {
   ];
   final items = <Widget>[
     Icon(
-      Icons.notifications_none,
+      Icons.home_outlined,
       size: 30,
       color: Colors.white30,
     ),
