@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/payment/widgets/pay_directly_confirm.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
-
-import 'widgets/bottom_item_payment.dart';
 import 'widgets/custom_positioned.dart';
 
 class PaymentPage extends StatefulWidget {
@@ -37,7 +36,7 @@ class _PaymentPageState extends State<PaymentPage> {
               child: Column(
                 children: [
                   Container(
-                    child: bottomItemBox(context),
+                    child: PayDirectlyConfirmItemBox(context),
                   ),
                   Container(
                     height: 60,

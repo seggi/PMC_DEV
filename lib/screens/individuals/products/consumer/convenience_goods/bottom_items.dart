@@ -159,7 +159,12 @@ Widget bottomItemBox(context, pgImg) {
                               borderRadius: BorderRadius.circular(12),
                               border: Border.all(color: Colors.teal)),
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PaymentPage()));
+                            },
                             child: Row(
                               children: [
                                 Icon(
@@ -193,10 +198,10 @@ Widget bottomItemBox(context, pgImg) {
                               border: Border.all(color: Colors.teal)),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => PaymentPage()));
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //         builder: (context) => PaymentPage()));
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,

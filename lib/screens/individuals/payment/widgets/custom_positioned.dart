@@ -21,9 +21,9 @@ Widget customPositioned(context) {
                         icon: Icon(Icons.arrow_back)),
                   ),
                   Text(
-                    "Payment Method",
+                    "PAY DIRECTLY CONFIRMATION",
                     style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
-                  )
+                  ),
                 ],
               )
             ],
