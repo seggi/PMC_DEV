@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pmc_dev/screens/individuals/cart/cart_page.dart';
 import 'package:pmc_dev/screens/individuals/payment/approve_order_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
+import 'package:pmc_dev/widgets/popup/cart_comfirmation_dialog.dart';
 
 Widget PayDirectlyConfirmItemBox(context) {
   return Container(
@@ -11,25 +13,13 @@ Widget PayDirectlyConfirmItemBox(context) {
         SizedBox(
           height: 20,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Column(
-              children: [
-                Row(
-                  children: [
-                    // roundedDots(),
-                    SizedBox(width: 20),
-                    Text(
-                      "Read this message carefully before you add to cart.",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400, fontFamily: 'Raleway'),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            "Read this message carefully before you add to cart.",
+            style:
+                TextStyle(fontWeight: FontWeight.w600, fontFamily: 'Raleway'),
+          ),
         ),
         SizedBox(
           height: 20,
@@ -154,99 +144,80 @@ Widget PayDirectlyConfirmItemBox(context) {
           ),
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Text('NB: In case no wallet is select the bill will go to your bank'),
         SizedBox(
-          height: 20,
+          height: 40,
         ),
-        Positioned(
-            width: 50,
-            bottom: 32,
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 10, right: 10),
-                    decoration: BoxDecoration(
-                        color: pmcCyan,
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.teal)),
-                    child: TextButton(
-                      onPressed: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) =>
-                        //             BankConfirmationPage()));
-                        // showDialog(
-                        //   context: context,
-                        //   builder: (BuildContext context) =>
-                        // DeliveryTimeDialog(),
-                        // optCodeDialog()
-                        // ServicePaymentDialog()
-                        // cartDialog()
-                        // BuyOptionDialog()
-                        // DeliveryDialog()
-                        //  DeliveryRecurrencyDialog()
-                        // DeliveryTimeDialog()
-                        // );
-                      },
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.shopping_cart_outlined,
-                            color: Colors.white,
-                            size: 20,
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Text("Add to Cart",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w800))
-                        ],
-                      ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              padding: EdgeInsets.only(left: 10, right: 10),
+              decoration: BoxDecoration(
+                  color: pmcCyan,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.teal)),
+              child: TextButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) =>
+                        cartComfirmationDialog(context),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.shopping_cart_outlined,
+                      color: Colors.white,
+                      size: 20,
                     ),
-                  ),
-                  SizedBox(
-                    width: 130,
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(left: 10, right: 10),
-                    decoration: BoxDecoration(
-                        color: Colors.redAccent,
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.red.shade100)),
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.cancel_sharp,
-                            color: Colors.white,
-                            size: 20,
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Text("Decline",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w800))
-                        ],
-                      ),
+                    SizedBox(
+                      width: 10,
                     ),
-                  ),
-                ],
+                    Text("Add to Cart",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800))
+                  ],
+                ),
               ),
-            ))
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 10, right: 10),
+              decoration: BoxDecoration(
+                  color: Colors.redAccent,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.red.shade100)),
+              child: TextButton(
+                onPressed: () {},
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.cancel_sharp,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("Decline",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w800))
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ],
     ),
   );

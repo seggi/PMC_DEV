@@ -10,22 +10,32 @@ Widget customPositioned(context) {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    child: IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        icon: Icon(Icons.arrow_back)),
-                  ),
-                  Text(
-                    "NINE_MONTH INSTALLMENT CONFIRMATION",
-                    style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
-                  ),
-                ],
-              )
+              Flexible(
+                  child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      child: Container(
+                        child: IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            icon: Icon(Icons.arrow_back)),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 15),
+                      child: Text(
+                        "NINE_MONTH INSTALLMENT CONFIRMATION",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+              )),
             ],
           )));
 }

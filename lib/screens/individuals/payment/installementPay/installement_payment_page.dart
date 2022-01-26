@@ -34,17 +34,7 @@ class _InstallementPaymentPageState extends State<InstallementPaymentPage> {
               ),
             ),
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Container(
-                      // child: PayDirectlyConfirmItemBox(context),
-                      ),
-                  Container(
-                    child: InstallementPaymentItemBox(context),
-                    height: 60,
-                  )
-                ],
-              ),
+              child: installementPaymentItemBox(context),
             ),
           ),
           customPositioned(context),

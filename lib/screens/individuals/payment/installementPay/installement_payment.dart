@@ -1,27 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-Widget InstallementPaymentItemBox(context) {
+Widget installementPaymentItemBox(context) {
   return Container(
     width: MediaQuery.of(context).size.width,
     child: Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                SizedBox(width: 20),
-                Text(
-                  "Installments Payments",
-                  style: TextStyle(fontWeight: FontWeight.w600),
-                )
-              ],
-            ),
-          ],
+        Container(
+          child: Text(
+            "Installments Payments",
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
         ),
         SizedBox(
-          height: 50,
+          height: 30,
         ),
         gridButton(context)
       ],
