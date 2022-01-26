@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pmc_dev/screens/individuals/payment/installementPay/installement_payment_page.dart';
 import 'package:pmc_dev/screens/individuals/payment/payment_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
@@ -198,10 +199,11 @@ Widget bottomItemBox(context, pgImg) {
                               border: Border.all(color: Colors.teal)),
                           child: TextButton(
                             onPressed: () {
-                              // Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (context) => PaymentPage()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          InstallementPaymentPage()));
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
