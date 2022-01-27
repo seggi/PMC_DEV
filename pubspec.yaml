@@ -35,6 +35,7 @@ dependencies:
   http: any
   dio: ^4.0.4
   image_picker:
+  smooth_star_rating: ^1.1.1
 
 dev_dependencies:
   flutter_test:
