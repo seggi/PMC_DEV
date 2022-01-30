@@ -162,7 +162,7 @@ Widget customCard(imageUrls, titleDesc, tedtDetails, titleW) {
           padding: EdgeInsets.all(2),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
           child: IconSlideAction(
-              caption: 'Pay Now',
+              caption: 'remove',
               color: Colors.cyan[900],
               icon: Icons.payment_outlined
               // onTap: () => _showSnackBar('Delete'),

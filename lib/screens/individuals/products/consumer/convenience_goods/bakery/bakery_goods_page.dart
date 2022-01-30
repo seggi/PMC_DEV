@@ -189,7 +189,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            Text("Pay Now",
+                                            Text("Pay Directly",
                                                 style: TextStyle(
                                                     color: Colors.teal,
                                                     fontSize: 18,
@@ -221,7 +221,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Flexible(
-                                              child: Text("Pay later",
+                                              child: Text("choose installment",
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 18,

@@ -155,7 +155,7 @@ Widget bottomWidget(context) {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text("Pay Now",
+                                Text("Pay Directly",
                                     style: TextStyle(
                                         color: Colors.teal,
                                         fontSize: 18,
@@ -183,7 +183,7 @@ Widget bottomWidget(context) {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Flexible(
-                                  child: Text("Pay later",
+                                  child: Text("choose installment",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 18,

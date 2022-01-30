@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/consumer/computer/phone/phone_goods_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
-import 'package:pmc_dev/screens/individuals/products/consumer/drinks/boxed_drinks_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/electricity/electricity_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/gas/gas_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/saloon/saloon_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/water/water_page.dart';
-// import 'package:pmc_dev/screens/individuals/products/product_details.dart';
-// import 'package:pmc_dev/screens/individuals/products/product_widget.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
 import '../product_widget.dart';
@@ -135,6 +132,32 @@ Widget categoryItem(context) {
                       context,
                       MaterialPageRoute(
                           builder: (context) => ConveniencePage(
+                                pgImg:
+                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSegrZzWOWFcaX12TxKy9xqgpXwE42JenTy2A&usqp=CAU',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSegrZzWOWFcaX12TxKy9xqgpXwE42JenTy2A&usqp=CAU"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => GasServicePage(
                                 pgImg:
                                     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSegrZzWOWFcaX12TxKy9xqgpXwE42JenTy2A&usqp=CAU',
                               )));
@@ -347,6 +370,31 @@ Widget categoryItem(context) {
               ),
             ),
           ],
+        ),
+        Flexible(
+          child: TextButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => WaterServicePage(
+                            pgImg:
+                                'https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg',
+                          )));
+            },
+            child: Container(
+              width: 200,
+              height: 120,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(12),
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg"),
+                    fit: BoxFit.fill),
+              ),
+            ),
+          ),
         ),
       ]));
 }

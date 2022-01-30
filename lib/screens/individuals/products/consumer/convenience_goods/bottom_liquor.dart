@@ -114,15 +114,6 @@ Widget liquorBottomItemBox(context, pgImg) {
                             SizedBox(
                               width: 20,
                             ),
-                            rectagleBox(Colors.white24, "2"),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            rectagleBox(Colors.white24, "3"),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            rotateBox(Colors.white24, "...")
                           ],
                         ),
                         SizedBox(
@@ -170,7 +161,7 @@ Widget liquorBottomItemBox(context, pgImg) {
                                 SizedBox(
                                   width: 10,
                                 ),
-                                Text("Pay Now",
+                                Text("Pay Directly",
                                     style: TextStyle(
                                         color: Colors.teal,
                                         fontSize: 16,
@@ -202,7 +193,7 @@ Widget liquorBottomItemBox(context, pgImg) {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Flexible(
-                                  child: Text("Pay later",
+                                  child: Text("Choose Installement",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 16,
