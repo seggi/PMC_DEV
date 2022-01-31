@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
+import 'package:pmc_dev/screens/individuals/products/consumer/gaz/gas_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/electricity/electricity_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/water/water_page.dart';
@@ -291,6 +292,64 @@ Widget categoryItem(context) {
                 ),
               ),
             ),
+          ],
+        ),
+
+        // Gas
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => GasPage(
+                                pgImg:
+                                    'https://sc04.alicdn.com/kf/HTB1VO6QJA9WBuNjSspeq6yz5VXa3.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://sc04.alicdn.com/kf/HTB1VO6QJA9WBuNjSspeq6yz5VXa3.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+            // Flexible(
+            //   child: TextButton(
+            //     onPressed: () {
+            //       Navigator.push(
+            //           context,
+            //           MaterialPageRoute(
+            //               builder: (context) => WaterServicePage(
+            //                     pgImg:
+            //                         'https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg',
+            //                   )));
+            //     },
+            //     child: Container(
+            //       width: 200,
+            //       height: 200,
+            //       decoration: BoxDecoration(
+            //         shape: BoxShape.rectangle,
+            //         borderRadius: BorderRadius.circular(12),
+            //         image: DecorationImage(
+            //             image: NetworkImage(
+            //                 "https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg"),
+            //             fit: BoxFit.fill),
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ]));
