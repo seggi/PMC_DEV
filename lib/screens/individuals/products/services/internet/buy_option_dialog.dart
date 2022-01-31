@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/products/services/internet/internet_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
 
-Widget buyOptionDialog(context, {required String pgImg}) {
+Widget buyOptionDialog1(context, {required String pgImg}) {
   return AlertDialog(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
@@ -23,7 +23,7 @@ Widget buyOptionDialog(context, {required String pgImg}) {
                 padding: const EdgeInsets.all(14.0),
                 child: Center(
                   child: Text(
-                    'Are you requesting this service for the first time? ',
+                    'Are you requesting this service for the first time?',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,

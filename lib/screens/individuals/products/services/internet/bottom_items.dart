@@ -55,46 +55,13 @@ Widget internetBottomItemBox(context, pgImg, serviceController) {
                       ),
                       formField("Router Number"),
                       SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
-                      formField("Container Capacity (KG)15kg"),
+                      formField("Owner's Name"),
                       SizedBox(
-                        width: 10,
+                        width: 5,
                       ),
                       formField("Quality Type"),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          color: Colors.white12,
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(8),
-                            topLeft: Radius.circular(8),
-                          ),
-                        ),
-                        // child: Wrap(
-                        //   alignment: WrapAlignment.start,
-                        //   children: [
-                        //     Column(
-                        //       children: [
-                        //         Text("Total Bill",
-                        //             style: TextStyle(
-                        //                 color: Colors.white30,
-                        //                 fontSize: 14,
-                        //                 fontWeight: FontWeight.w300)),
-                        //         Text(
-                        //           "9,500Rwf",
-                        //           style: TextStyle(
-                        //               color: Colors.white30,
-                        //               fontSize: 14,
-                        //               fontWeight: FontWeight.w300),
-                        //         ),
-                        //       ],
-                        //     ),
-                        //   ],
-                        // ),
-                      ),
                       SizedBox(
                         width: 10,
                       ),

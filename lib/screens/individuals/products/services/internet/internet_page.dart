@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/services/gas/bottom_items.dart';
 import 'package:pmc_dev/screens/individuals/products/services/internet/bottom_items.dart';
 import '../custom_positioned.dart';
 

@@ -4,8 +4,7 @@ import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/electricity/electricity_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/gas/buy_option_dialog.dart';
-import 'package:pmc_dev/screens/individuals/products/services/gas/gas_page.dart';
-import 'package:pmc_dev/screens/individuals/products/services/internet/internet_items_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/internet/buy_option_dialog.dart';
 import 'package:pmc_dev/screens/individuals/products/services/saloon/saloon_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/water/water_page.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_details.dart';
@@ -220,7 +219,7 @@ Widget categoryItem(context) {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => buyOptionDialog(
+                          builder: (context) => buyOptionDialog1(
                                 context,
                                 pgImg:
                                     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiGO_bZXeegJAAytRF7LD0hS5dCFyokcL62g&usqp=CAU',

@@ -54,51 +54,79 @@ Widget internetBottomItemBox1(context, pgImg, serviceController) {
                         width: 10,
                       ),
                       Text(
-                        "Mtn 3G",
+                        "The 3G fastest network there is.",
                       ),
                       Divider(),
                       SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          color: Colors.white30,
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(8),
-                            topLeft: Radius.circular(8),
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Total Bill",
-                                style: TextStyle(
-                                    color: Colors.white30,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w300)),
-                            Text("9,500Rwf"),
-                          ],
-                        ),
-                      ),
                     ],
                   ),
                   Divider(),
                   Container(
-                    child: Text("Extra Costs With Addition Accessories"),
+                    width: 500,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: Text("Extra Costs "),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Infrastructure cost"),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text("1000 Rwf"),
+                              ],
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text("Service Cost"),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text("2000 Rwf"),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Divider(),
-                  Column(
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Seller"),
-                      SizedBox(
-                        height: 5,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Seller"),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text("Muhire Jean"),
+                        ],
                       ),
-                      Text("Muhire Jean"),
                     ],
                   ),
                   Column(
