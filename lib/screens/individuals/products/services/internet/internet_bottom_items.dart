@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/payment/installementPay/installement_payment_page.dart';
 import 'package:pmc_dev/screens/individuals/payment/payment_page.dart';
 
-Widget gasBottomItemBox1(context, pgImg, serviceController) {
+Widget internetBottomItemBox1(context, pgImg, serviceController) {
   return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
@@ -19,7 +19,7 @@ Widget gasBottomItemBox1(context, pgImg, serviceController) {
           children: [
             Padding(
                 padding: const EdgeInsets.all(18.0),
-                child: Text("Cooking Gas",
+                child: Text("Internet Service",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -54,7 +54,7 @@ Widget gasBottomItemBox1(context, pgImg, serviceController) {
                         width: 10,
                       ),
                       Text(
-                        "Original gas from rwanda",
+                        "Mtn 3G",
                       ),
                       Divider(),
                       SizedBox(

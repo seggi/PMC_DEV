@@ -5,6 +5,7 @@ import 'package:pmc_dev/screens/individuals/products/services/car/car_services_p
 import 'package:pmc_dev/screens/individuals/products/services/electricity/electricity_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/gas/buy_option_dialog.dart';
 import 'package:pmc_dev/screens/individuals/products/services/gas/gas_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/internet/internet_items_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/saloon/saloon_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/water/water_page.dart';
 // import 'package:pmc_dev/screens/individuals/products/product_details.dart';
@@ -200,6 +201,65 @@ Widget categoryItem(context) {
                     image: DecorationImage(
                         image: NetworkImage(
                             "https://produits.bienmanger.com/35274-0w600h600_Grand_Marnier_Liquor_Cordon_Rouge.jpg"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+
+        // Internet page
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => buyOptionDialog(
+                                context,
+                                pgImg:
+                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiGO_bZXeegJAAytRF7LD0hS5dCFyokcL62g&usqp=CAU',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiGO_bZXeegJAAytRF7LD0hS5dCFyokcL62g&usqp=CAU"),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+            ),
+            Flexible(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => WaterServicePage(
+                                pgImg:
+                                    'https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg',
+                              )));
+                },
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg"),
                         fit: BoxFit.fill),
                   ),
                 ),

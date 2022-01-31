@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/services/gas/gas_bottom_items.dart';
+import 'package:pmc_dev/screens/individuals/products/services/internet/internet_bottom_items.dart';
 import '../custom_positioned.dart';
 
 class InternetItemsPage extends StatefulWidget {
@@ -28,7 +28,8 @@ class _InternetItemsPageState extends State<InternetItemsPage> {
                 children: [
                   productImageButton(pgImg),
                   Container(
-                    child: gasBottomItemBox1(context, pgImg, serviceController),
+                    child: internetBottomItemBox1(
+                        context, pgImg, serviceController),
                   ),
                   Container(
                     height: 60,

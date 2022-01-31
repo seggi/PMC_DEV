@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/services/gas/gas_items_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/internet/internet_items_page.dart';
 import 'package:pmc_dev/widgets/custom_input.dart';
 
-Widget gasBottomItemBox(context, pgImg, serviceController) {
+Widget internetBottomItemBox(context, pgImg, serviceController) {
   return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
@@ -19,7 +19,7 @@ Widget gasBottomItemBox(context, pgImg, serviceController) {
           children: [
             Padding(
                 padding: const EdgeInsets.all(18.0),
-                child: Text("Cooking Gas",
+                child: Text("Internet Service",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -53,13 +53,15 @@ Widget gasBottomItemBox(context, pgImg, serviceController) {
                       SizedBox(
                         width: 10,
                       ),
-                      Text(
-                        "Cylinder Info",
+                      formField("Router Number"),
+                      SizedBox(
+                        height: 10,
                       ),
                       formField("Container Capacity (KG)15kg"),
                       SizedBox(
                         width: 10,
                       ),
+                      formField("Quality Type"),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(20),
@@ -71,27 +73,27 @@ Widget gasBottomItemBox(context, pgImg, serviceController) {
                             topLeft: Radius.circular(8),
                           ),
                         ),
-                        child: Wrap(
-                          alignment: WrapAlignment.start,
-                          children: [
-                            Column(
-                              children: [
-                                Text("Total Bill",
-                                    style: TextStyle(
-                                        color: Colors.white30,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w300)),
-                                Text(
-                                  "9,500Rwf",
-                                  style: TextStyle(
-                                      color: Colors.white30,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w300),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                        // child: Wrap(
+                        //   alignment: WrapAlignment.start,
+                        //   children: [
+                        //     Column(
+                        //       children: [
+                        //         Text("Total Bill",
+                        //             style: TextStyle(
+                        //                 color: Colors.white30,
+                        //                 fontSize: 14,
+                        //                 fontWeight: FontWeight.w300)),
+                        //         Text(
+                        //           "9,500Rwf",
+                        //           style: TextStyle(
+                        //               color: Colors.white30,
+                        //               fontSize: 14,
+                        //               fontWeight: FontWeight.w300),
+                        //         ),
+                        //       ],
+                        //     ),
+                        //   ],
+                        // ),
                       ),
                       SizedBox(
                         width: 10,
@@ -117,7 +119,8 @@ Widget gasBottomItemBox(context, pgImg, serviceController) {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => GasItemsPage(
+                                          builder: (context) =>
+                                              InternetItemsPage(
                                                 pgImg: pgImg,
                                               )));
                                 },
