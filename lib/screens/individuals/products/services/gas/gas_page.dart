@@ -10,13 +10,11 @@ class GasServicePage extends StatefulWidget {
 }
 
 class _GasServicePageState extends State<GasServicePage> {
-  final _formKey = GlobalKey<FormState>();
   final serviceController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final pgImg = widget.pgImg;
     final double height = MediaQuery.of(context).size.height;
-    final double width = MediaQuery.of(context).size.width;
     return Container(
         child: SafeArea(
             child: Scaffold(

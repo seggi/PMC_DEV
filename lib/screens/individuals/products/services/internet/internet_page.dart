@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/products/services/gas/bottom_items.dart';
 import '../custom_positioned.dart';
-import 'bottom_items.dart';
 
-class SaloonPage extends StatefulWidget {
-  SaloonPage({Key? key, required this.pgImg}) : super(key: key);
+class InternetServicePage extends StatefulWidget {
+  InternetServicePage({Key? key, required this.pgImg}) : super(key: key);
   final pgImg;
   @override
-  _SaloonPageState createState() => _SaloonPageState();
+  _InternetServicePageState createState() => _InternetServicePageState();
 }
 
-class _SaloonPageState extends State<SaloonPage> {
+class _InternetServicePageState extends State<InternetServicePage> {
   final serviceController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _SaloonPageState extends State<SaloonPage> {
                 children: [
                   productImageButton(pgImg),
                   Container(
-                    child: bottomItemBox(context, pgImg, serviceController),
+                    child: gasBottomItemBox(context, pgImg, serviceController),
                   ),
                   Container(
                     height: 60,

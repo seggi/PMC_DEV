@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pmc_dev/screens/individuals/payment/installementPay/installement_payment_page.dart';
 import 'package:pmc_dev/screens/individuals/payment/payment_page.dart';
-import 'package:pmc_dev/screens/individuals/products/services/gas/gas_items_page.dart';
-import 'package:pmc_dev/widgets/custom_input.dart';
 
-Widget gasBottomItemBox(context, pgImg, serviceController) {
+Widget gasBottomItemBox1(context, pgImg, serviceController) {
   return Container(
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
@@ -55,9 +54,9 @@ Widget gasBottomItemBox(context, pgImg, serviceController) {
                         width: 10,
                       ),
                       Text(
-                        "Cylinder Info",
+                        "Original gas from rwanda",
                       ),
-                      formField("Container Capacity (KG)15kg"),
+                      Divider(),
                       SizedBox(
                         width: 10,
                       ),
@@ -65,46 +64,86 @@ Widget gasBottomItemBox(context, pgImg, serviceController) {
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.white12,
+                          color: Colors.white30,
                           shape: BoxShape.rectangle,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(8),
                             topLeft: Radius.circular(8),
                           ),
                         ),
-                        child: Wrap(
-                          alignment: WrapAlignment.start,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Column(
-                              children: [
-                                Text("Total Bill",
-                                    style: TextStyle(
-                                        color: Colors.white30,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w300)),
-                                Text(
-                                  "9,500Rwf",
-                                  style: TextStyle(
-                                      color: Colors.white30,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w300),
-                                ),
-                              ],
-                            ),
+                            Text("Total Bill",
+                                style: TextStyle(
+                                    color: Colors.white30,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300)),
+                            Text("9,500Rwf"),
                           ],
                         ),
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
                     ],
                   ),
-                  SizedBox(height: 30),
+                  Divider(),
+                  Container(
+                    child: Text("Extra Costs With Addition Accessories"),
+                  ),
+                  Divider(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Seller"),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text("Muhire Jean"),
+                    ],
+                  ),
                   Column(
                     children: [
                       SizedBox(height: 30),
                       Row(
                         children: [
+                          Flexible(
+                            child: Container(
+                              padding: EdgeInsets.all(4),
+                              decoration: BoxDecoration(
+                                  color: Colors.black54,
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(12),
+                                  border: Border.all(color: Colors.teal)),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => PaymentPage()));
+                                },
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.storage_outlined,
+                                      color: Colors.teal,
+                                      size: 20,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text("Pay Directly",
+                                        style: TextStyle(
+                                            color: Colors.teal,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w800))
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
                           Flexible(
                             child: Container(
                               padding: EdgeInsets.all(4),
@@ -118,28 +157,31 @@ Widget gasBottomItemBox(context, pgImg, serviceController) {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => GasItemsPage(
-                                                pgImg: pgImg,
-                                              )));
+                                          builder: (context) =>
+                                              InstallementPaymentPage()));
                                 },
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    Flexible(
+                                      child: Text("choose installment",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w800)),
+                                    ),
                                     SizedBox(
                                       width: 10,
                                     ),
-                                    Text("Comfirm",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w400))
+                                    Icon(
+                                      Icons.arrow_forward_ios_outlined,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 10,
                           ),
                         ],
                       )

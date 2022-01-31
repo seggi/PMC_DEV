@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pmc_dev/screens/individuals/products/consumer/computer/phone/phone_goods_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/convenience_page.dart';
 import 'package:pmc_dev/screens/individuals/products/consumer/convenience_goods/liquor_page.dart';
-import 'package:pmc_dev/screens/individuals/products/consumer/drinks/boxed_drinks_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/car/car_services_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/electricity/electricity_page.dart';
+import 'package:pmc_dev/screens/individuals/products/services/gas/buy_option_dialog.dart';
 import 'package:pmc_dev/screens/individuals/products/services/gas/gas_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/saloon/saloon_page.dart';
 import 'package:pmc_dev/screens/individuals/products/services/water/water_page.dart';
@@ -160,7 +159,8 @@ Widget categoryItem(context) {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => GasServicePage(
+                          builder: (context) => buyOptionDialog(
+                                context,
                                 pgImg:
                                     'https://pictures-nigeria.jijistatic.com/49597163_1-5-resize-35_1_600x600.jpg',
                               )));
