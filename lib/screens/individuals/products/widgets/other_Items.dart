@@ -323,115 +323,115 @@ Widget categoryItem(context) {
           ],
         ),
         // Second Row
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Flexible(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => CarServicePage(
-                                pgImg:
-                                    'https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349',
-                              )));
-                },
-                child: Container(
-                  width: 200,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(12),
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349"),
-                        fit: BoxFit.fill),
-                  ),
-                ),
-              ),
-            ),
-            Flexible(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => WaterServicePage(
-                                pgImg:
-                                    'https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg',
-                              )));
-                },
-                child: Container(
-                  width: 200,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(12),
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            "https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg"),
-                        fit: BoxFit.fill),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Flexible(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ElectricityServicePage(
-                                pgImg:
-                                    'https://www.thoughtco.com/thmb/NjWNoDg8rEZ4KVQMUq3xwp3G6tU=/735x0/lightbulblit-57a5bf6b5f9b58974aee831e.jpg',
-                              )));
-                },
-                child: Container(
-                  width: 200,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(12),
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            "https://www.thoughtco.com/thmb/NjWNoDg8rEZ4KVQMUq3xwp3G6tU=/735x0/lightbulblit-57a5bf6b5f9b58974aee831e.jpg"),
-                        fit: BoxFit.fill),
-                  ),
-                ),
-              ),
-            ),
-            Flexible(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => WaterServicePage(
-                                pgImg:
-                                    'https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg',
-                              )));
-                },
-                child: Container(
-                  width: 200,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(12),
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            "https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg"),
-                        fit: BoxFit.fill),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //   children: [
+        //     Flexible(
+        //       child: TextButton(
+        //         onPressed: () {
+        //           Navigator.push(
+        //               context,
+        //               MaterialPageRoute(
+        //                   builder: (context) => CarServicePage(
+        //                         pgImg:
+        //                             'https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349',
+        //                       )));
+        //         },
+        //         child: Container(
+        //           width: 200,
+        //           height: 120,
+        //           decoration: BoxDecoration(
+        //             shape: BoxShape.rectangle,
+        //             borderRadius: BorderRadius.circular(12),
+        //             image: DecorationImage(
+        //                 image: NetworkImage(
+        //                     "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349"),
+        //                 fit: BoxFit.fill),
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //     Flexible(
+        //       child: TextButton(
+        //         onPressed: () {
+        //           Navigator.push(
+        //               context,
+        //               MaterialPageRoute(
+        //                   builder: (context) => WaterServicePage(
+        //                         pgImg:
+        //                             'https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg',
+        //                       )));
+        //         },
+        //         child: Container(
+        //           width: 200,
+        //           height: 200,
+        //           decoration: BoxDecoration(
+        //             shape: BoxShape.rectangle,
+        //             borderRadius: BorderRadius.circular(12),
+        //             image: DecorationImage(
+        //                 image: NetworkImage(
+        //                     "https://www.prominent.ca/media/Applications/app-water-treatment-and-disinfection_Header_1.jpg"),
+        //                 fit: BoxFit.fill),
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //   ],
+        // ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //   children: [
+        //     Flexible(
+        //       child: TextButton(
+        //         onPressed: () {
+        //           Navigator.push(
+        //               context,
+        //               MaterialPageRoute(
+        //                   builder: (context) => ElectricityServicePage(
+        //                         pgImg:
+        //                             'https://www.thoughtco.com/thmb/NjWNoDg8rEZ4KVQMUq3xwp3G6tU=/735x0/lightbulblit-57a5bf6b5f9b58974aee831e.jpg',
+        //                       )));
+        //         },
+        //         child: Container(
+        //           width: 200,
+        //           height: 200,
+        //           decoration: BoxDecoration(
+        //             shape: BoxShape.rectangle,
+        //             borderRadius: BorderRadius.circular(12),
+        //             image: DecorationImage(
+        //                 image: NetworkImage(
+        //                     "https://www.thoughtco.com/thmb/NjWNoDg8rEZ4KVQMUq3xwp3G6tU=/735x0/lightbulblit-57a5bf6b5f9b58974aee831e.jpg"),
+        //                 fit: BoxFit.fill),
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //     Flexible(
+        //       child: TextButton(
+        //         onPressed: () {
+        //           Navigator.push(
+        //               context,
+        //               MaterialPageRoute(
+        //                   builder: (context) => WaterServicePage(
+        //                         pgImg:
+        //                             'https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg',
+        //                       )));
+        //         },
+        //         child: Container(
+        //           width: 200,
+        //           height: 120,
+        //           decoration: BoxDecoration(
+        //             shape: BoxShape.rectangle,
+        //             borderRadius: BorderRadius.circular(12),
+        //             image: DecorationImage(
+        //                 image: NetworkImage(
+        //                     "https://www.newsstrategies.com/wp-content/uploads/2019/03/images2543-5c814381bb9d5-1024x684.jpg"),
+        //                 fit: BoxFit.fill),
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ]));
 }

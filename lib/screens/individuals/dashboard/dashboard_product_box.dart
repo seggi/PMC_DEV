@@ -191,28 +191,29 @@ Widget articleDetails(imageUrls, titleDesc, tedtDetails) {
           ),
         ),
         Container(
-            padding: EdgeInsets.all(2),
-            decoration: BoxDecoration(
-              color: Colors.cyan,
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(12),
-                topRight: Radius.circular(12),
-                topLeft: Radius.circular(12),
-                bottomLeft: Radius.circular(12),
-              ),
+          padding: EdgeInsets.all(2),
+          decoration: BoxDecoration(
+            color: Colors.cyan,
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(12),
+              topRight: Radius.circular(12),
+              topLeft: Radius.circular(12),
+              bottomLeft: Radius.circular(12),
             ),
-            child: TextButton(
-              onPressed: () {},
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.double_arrow_outlined,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-            )),
+          ),
+          // child: TextButton(
+          //   onPressed: () {},
+          //   child: Row(
+          //     children: [
+          //       Icon(
+          //         Icons.double_arrow_outlined,
+          //         color: Colors.white,
+          //       ),
+          //     ],
+          //   ),
+          // )
+        ),
       ],
     ),
   );
