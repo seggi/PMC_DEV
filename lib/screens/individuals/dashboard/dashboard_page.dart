@@ -86,9 +86,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
 
   Widget mainWidget() {
     return Container(
-
-        // padding: EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 8),
-
+        padding: EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 8),
         decoration: BoxDecoration(
             // color: Color,
             borderRadius: BorderRadius.only(
