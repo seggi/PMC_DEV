@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pmc_dev/screens/individuals/payment/payment_page.dart';
 import 'package:pmc_dev/widgets/custom_colors/colors.dart';
+import 'package:pmc_dev/widgets/custom_input.dart';
 
 import '../../product_details.dart';
 
@@ -73,105 +74,67 @@ Widget gymBottomItemBox(context, pgImg) {
                           fontWeight: FontWeight.w300),
                     ),
                   ),
-                  SizedBox(
-                    width: 20,
+
+                  Container(
+                    child: Text("",
+                        style: TextStyle(
+                            color: Colors.white30,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w300)),
                   ),
-                  // CheckBox(),
-                  // SizedBox(
-                  //   height: 8,
-                  // ),
-                  // Row(
-                  //   children: [
-                  //     Column(
-                  //       children: [
-                  //         Text("seller"),
-                  //         SizedBox(
-                  //           height: 4,
-                  //         ),
-                  //       ],
-                  //     ),
-                  //      Column(
-                  //       children: [
-                  //         Text("Price"),
-                  //         SizedBox(
-                  //           height: 4,
-                  //         ),
-                  //       ],
-                  //     )
-                  //   ],
-                  // ),
-                  // Divider(),
-
-                  // Row(
-                  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //     children: [
-                  //       Text("Item in stock",
-                  //           style: TextStyle(
-                  //               color: Colors.white,
-                  //               fontSize: 12,
-                  //               fontWeight: FontWeight.w300)),
-                  //       Column(
-                  //         children: [
-                  //           Text("Discount",
-                  //               style: TextStyle(
-                  //                   color: Colors.white,
-                  //                   fontSize: 12,
-                  //                   fontWeight: FontWeight.w300)),
-                  //         ],
-                  //       ),
-                  //     ]),
-                  // SizedBox(
-                  //   height: 4,
-                  // ),
-                  // Container(
-                  //   padding: EdgeInsets.only(
-                  //     top: 20,
-                  //   ),
-                  //   child: Row(
-                  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //     children: [
-                  //       Row(
-                  //         children: [
-                  //           Row(
-                  //             children: [
-                  //               rectagleBox(
-                  //                 Colors.white24,
-                  //                 "0",
-                  //               ),
-                  //               SizedBox(
-                  //                 width: 370,
-                  //               ),
-                  //               rectagleBox(
-                  //                 Colors.white24,
-                  //                 "5%",
-                  //               ),
-                  //             ],
-                  //           ),
-                  //         ],
-                  //       ),
-
-                  //       // Flexible(
-                  //       //     child: Container(
-                  //       //   decoration: BoxDecoration(
-                  //       //       borderRadius: BorderRadius.circular(12),
-                  //       //       border: Border.all(color: pmcWhite54)),
-                  //       //   child: TextFormField(
-                  //       //     keyboardType: TextInputType.text,
-                  //       //     textInputAction: TextInputAction.next,
-                  //       //     decoration: InputDecoration(
-                  //       //         hintText: 'Bread',
-                  //       //         border: OutlineInputBorder(
-                  //       //           borderRadius: BorderRadius.circular(10),
-                  //       //           borderSide: BorderSide.none,
-                  //       //         )),
-                  //       //   ),
-                  //       // )),
-                  //     ],
-                  //   ),
-                  // ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        child: Text(
+                          "Gym Subscription Category Detail",
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(4.0),
+                    margin: EdgeInsets.only(top: 20.0),
+                    decoration: BoxDecoration(
+                        color: Colors.white12,
+                        borderRadius: BorderRadius.circular(5.0)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Flexible(
+                            child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "No Wallets Found.",
+                            style: TextStyle(color: pmcWhite24, fontSize: 14),
+                          ),
+                        )),
+                        Flexible(
+                            child: Container(
+                                padding: EdgeInsets.all(0.0),
+                                height: 40,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: pmcCyan,
+                                    borderRadius: BorderRadius.circular(8.0)),
+                                child: TextButton(
+                                    onPressed: () {},
+                                    child: Icon(
+                                      Icons.wallet_travel,
+                                      color: Colors.white54,
+                                    ))))
+                      ],
+                    ),
+                  ),
 
                   SizedBox(height: 30),
-                  Divider(),
+                  // Divider(),
                   Padding(
                     padding: EdgeInsets.only(top: 20, bottom: 20),
                     child: Row(
@@ -187,137 +150,8 @@ Widget gymBottomItemBox(context, pgImg) {
                               Text("Kigali Gym"),
                             ],
                           ),
-                          Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Price"),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text("1000 frw",
-                                    style: TextStyle(
-                                        color: Colors.red,
-                                        decoration:
-                                            TextDecoration.lineThrough)),
-                                Text(
-                                  "11112 frw",
-                                )
-                              ]),
                         ]),
                   ),
-                  // Divider(),
-                  // Container(
-                  //   width: 500,
-                  //   // color: Colors.amber,
-                  //   padding: EdgeInsets.only(top: 20, right: 20, bottom: 20),
-                  //   margin: EdgeInsets.only(bottom: 20),
-                  //   child: Column(
-                  //     crossAxisAlignment: CrossAxisAlignment.start,
-                  //     children: [
-                  //       Text(
-                  //           "How many times do you need this product in a month?"),
-                  //       SizedBox(
-                  //         height: 10,
-                  //       ),
-                  //       Container(
-                  //         width: 200,
-                  //         child: TextField(
-                  //           autocorrect: true,
-                  //           textAlign: TextAlign.center,
-                  //           keyboardType: TextInputType.number,
-                  //           textInputAction: TextInputAction.next,
-                  //           decoration: InputDecoration(
-                  //               hintText: '1',
-                  //               border: OutlineInputBorder(
-                  //                 borderRadius: BorderRadius.circular(10),
-                  //                 borderSide: BorderSide.none,
-                  //               ),
-                  //               filled: true),
-                  //         ),
-                  //       ),
-                  //       SizedBox(
-                  //         height: 5,
-                  //       ),
-                  //       Text(
-                  //           "*The total cost will be affected by the number of times this product will be delivered to you in a month."),
-                  //     ],
-                  //   ),
-                  // ),
-                  // Divider(),
-                  // Container(
-                  //   child: Column(
-                  //     crossAxisAlignment: CrossAxisAlignment.start,
-                  //     children: [
-                  //       Text(
-                  //         "How many Product(s) ?",
-                  //       ),
-                  //       SizedBox(
-                  //         height: 10,
-                  //       ),
-                  //       Row(
-                  //         children: [
-                  //           Container(
-                  //             padding: EdgeInsets.all(10),
-                  //             decoration: BoxDecoration(
-                  //               color: Colors.white30,
-                  //               borderRadius: BorderRadius.only(
-                  //                 bottomLeft: Radius.circular(8),
-                  //                 topLeft: Radius.circular(8),
-                  //               ),
-                  //             ),
-                  //             child: TextButton(
-                  //                 onPressed: () {},
-                  //                 child: Icon(
-                  //                   Icons.arrow_back_ios,
-                  //                   color: Colors.white,
-                  //                 )),
-                  //           ),
-                  //           Container(
-                  //             width: 80,
-                  //             child: TextField(
-                  //               autocorrect: true,
-                  //               textAlign: TextAlign.center,
-                  //               keyboardType: TextInputType.number,
-                  //               textInputAction: TextInputAction.next,
-                  //               decoration: InputDecoration(
-                  //                   hintText: '1',
-                  //                   border: OutlineInputBorder(
-                  //                     borderSide: BorderSide.none,
-                  //                   ),
-                  //                   filled: true),
-                  //             ),
-                  //           ),
-                  //           Container(
-                  //             padding: EdgeInsets.all(10),
-                  //             decoration: BoxDecoration(
-                  //               color: Colors.white30,
-                  //               borderRadius: BorderRadius.only(
-                  //                 bottomRight: Radius.circular(8),
-                  //                 topRight: Radius.circular(8),
-                  //               ),
-                  //             ),
-                  //             child: TextButton(
-                  //                 onPressed: () {},
-                  //                 child: Icon(
-                  //                   Icons.arrow_forward_ios,
-                  //                   color: Colors.white54,
-                  //                 )),
-                  //           )
-                  //         ],
-                  //       )
-                  //     ],
-                  //   ),
-                  // ),
-                  // Divider(),
-                  // Container(
-                  //   alignment: Alignment.bottomLeft,
-                  //   padding:
-                  //       const EdgeInsets.only(top: 20, right: 20, bottom: 20),
-                  //   child: Text(
-                  //     "How do you wish to pay from your bank?",
-                  //   ),
-                  // ),
-
                   Row(
                     children: [
                       Flexible(
