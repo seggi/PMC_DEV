@@ -98,40 +98,42 @@ Widget gymBottomItemBox(context, pgImg) {
                   SizedBox(
                     height: 5,
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(4.0),
-                    margin: EdgeInsets.only(top: 20.0),
-                    decoration: BoxDecoration(
-                        color: Colors.white12,
-                        borderRadius: BorderRadius.circular(5.0)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Flexible(
-                            child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "No Wallets Found.",
-                            style: TextStyle(color: pmcWhite24, fontSize: 14),
-                          ),
-                        )),
-                        Flexible(
-                            child: Container(
-                                padding: EdgeInsets.all(0.0),
-                                height: 40,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                    color: pmcCyan,
-                                    borderRadius: BorderRadius.circular(8.0)),
-                                child: TextButton(
-                                    onPressed: () {},
-                                    child: Icon(
-                                      Icons.wallet_travel,
-                                      color: Colors.white54,
-                                    ))))
-                      ],
-                    ),
-                  ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(4.0),
+                  //   margin: EdgeInsets.only(top: 20.0),
+                  //   decoration: BoxDecoration(
+                  //       color: Colors.white12,
+                  //       borderRadius: BorderRadius.circular(5.0)),
+                  //   child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.start,
+                  //     children: [
+                  //       Flexible(
+                  //           child: TextButton(
+                  //         onPressed: () {},
+                  //         child: Text(
+                  //           "Semester (6 months subscription)",
+                  //           style: TextStyle(color: pmcWhite24, fontSize: 14),
+                  //         ),
+                  //       )),
+
+                  //       Flexible(
+                  //           child: Container(
+                  //               // padding: EdgeInsets.all(0.0),
+                  //               // height: 40,
+                  //               // width: 50,
+                  //               // decoration: BoxDecoration(
+                  //               //     color: pmcCyan,
+                  //               //     borderRadius: BorderRadius.circular(8.0)),
+                  //               child: TextButton(
+                  //                   onPressed: () {},
+                  //                   child: Icon(
+                  //                     Icons.download_for_offline,
+                  //                     color: Colors.white54,
+                  //                   ))))
+                  //     ],
+                  //   ),
+                  // ),
+                  Container(child: CustomDropDownBox1()),
 
                   SizedBox(height: 30),
                   // Divider(),
@@ -321,6 +323,49 @@ class _CheckBoxState extends State<CheckBox> {
             ],
           )
         ],
+      ),
+    );
+  }
+}
+
+class CustomDropDownBox1 extends StatefulWidget {
+  const CustomDropDownBox1({Key? key}) : super(key: key);
+
+  @override
+  State<CustomDropDownBox1> createState() => _CustomDropDownBox1State();
+}
+
+class _CustomDropDownBox1State extends State<CustomDropDownBox1> {
+  String dropdownValue = 'Monthly subscription';
+
+  @override
+  Widget build(BuildContext context) {
+    return ConstrainedBox(
+      constraints: BoxConstraints.tight(const Size(400, 50)),
+      child: DropdownButton<String>(
+        value: dropdownValue,
+        icon: const Icon(Icons.arrow_drop_down),
+        elevation: 16,
+        style: const TextStyle(color: Colors.white54),
+        underline: SizedBox(),
+        onChanged: (String? newValue) {
+          setState(() {
+            dropdownValue = newValue!;
+          });
+        },
+        items: <String>[
+          'Monthly subscription',
+          'Semester (6 months subscription)',
+          'Nine-months (9 months)',
+          'Trimester (3 months subscription)',
+          'Yearly (12 months)',
+          'Monthly (once off)'
+        ].map<DropdownMenuItem<String>>((String value) {
+          return DropdownMenuItem<String>(
+            value: value,
+            child: Text(value),
+          );
+        }).toList(),
       ),
     );
   }
